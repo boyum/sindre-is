@@ -6,6 +6,10 @@
     function pageLoad() {
         var is = findGetParameter('is');
 
+        is = is.replace(/\-/g, ' ');
+        is = is.replace(/\n/g, ' ');
+        is = is.replace(/%20/g, ' ');
+
         setIs(is);
         setPageTitle(is);
     }
