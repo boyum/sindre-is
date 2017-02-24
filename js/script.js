@@ -1,25 +1,35 @@
-(function() {
+(function () {
     'use strict';
 
     document.addEventListener('DOMContentLoaded', pageLoad);
 
     function pageLoad() {
-        var span = document.getElementsByClassName('js-is')[0];
         var is = findGetParameter('is');
 
+        setIs(is);
+        setPageTitle(is);
+    }
+
+    function setIs(is) {
+        var span = document.getElementsByClassName('js-is')[0];
+        
         span.innerText = is;
+    }
+
+    function setPageTitle(is) {
+        document.title = 'Sindre is ' + is;
     }
 
     function findGetParameter(parameterName) {
         var result = null,
             tmp = [];
         location.search
-        .substr(1)
+            .substr(1)
             .split("&")
             .forEach(function (item) {
-            tmp = item.split("=");
-            if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-        });
+                tmp = item.split("=");
+                if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+            });
         return result;
     }
 })();
