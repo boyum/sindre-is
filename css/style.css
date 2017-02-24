@@ -1,0 +1,22 @@
+body {
+    background-color: #34495e;
+    bottom: 0;
+    font-family: sans-serif;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.container {
+    color: #1abc9c;
+    font-size: 50px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.is {
+    color: #9b59b6;
+    font-size: 72px;
+}
