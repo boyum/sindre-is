@@ -1,0 +1,297 @@
+:root {
+  --blue: #082840;
+  --darkgray: #333;
+  --darkred: #7F0036;
+  --gray: #C0C0C0;
+  --lightgray: #e0e0e0;
+  --navy: #17050F;
+  --red: #C5004A;
+  --white: #fff;
+
+  --primary-color: #00A37D;
+  /* --primary-color: #5E2BFF;   */
+  --sun-size: 5rem;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: 0.125rem var(--primary-color) solid;  
+}
+
+html {
+  color: var(--darkgray);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body { 
+  background-color: #fff;
+  font-size: calc(0.95rem + 0.5vw);
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+p,
+.tmpl-post li,
+img {
+  max-width: 37.5em;
+}
+
+p,
+.tmpl-post li {
+  line-height: 1.45;
+}
+
+a[href] {
+  color: var(--blue);
+}
+
+a[href]:visited {
+  color: var(--navy);
+}
+
+main {
+  margin: 0 auto;
+  max-width: 50rem;
+  width: 90%;
+}
+
+header {
+  align-items: center;  
+  border-bottom: 0.0625rem dashed var(--lightgray);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* .home,
+.nav {
+  min-width: 17.5rem;
+} */
+
+table {
+  margin: 1em 0;
+}
+
+table td,
+table th {
+  padding-right: 1em;
+}
+
+pre,
+code {
+  font-family: "Fira Code", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  line-height: 1.5;
+}
+
+pre {
+  background-color: #f6f6f6;
+  direction: ltr;
+  font-size: .875rem;
+  hyphens: none;
+  line-height: 1.375;
+  margin: .5em 0;
+  padding: 1em;
+  tab-size: 2;
+  text-align: left;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+}
+
+.highlight-line {
+  color: inherit;
+  display: block;
+  padding: 0.125em 1em;
+  text-decoration: none;
+}
+
+.highlight-line:empty::before {
+  content: " ";
+}
+
+.highlight-line+br {
+  display: none;
+}
+
+.highlight-line-isdir {
+  color: #b0b0b0;
+  background-color: #222;
+}
+
+.highlight-line-active {
+  background-color: #444;
+  background-color: hsla(0, 0%, 27%, .8);
+}
+
+.highlight-line-add {
+  background-color: #45844b;
+}
+
+.highlight-line-remove {
+  background-color: #902f2f;
+}
+
+.home {
+  padding: 0 1rem;
+  margin: 1rem 0;
+  font-size: 1em;
+}
+
+.home a {
+  text-decoration: none;
+}
+
+.home a:hover,
+.home a:focus {
+  text-decoration: underline;
+}
+
+.nav {
+  list-style: none;
+  margin-left: 1em;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.nav-item a[href]:not(:hover) {
+  text-decoration: none;
+}
+
+.nav-item-active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.frontpage-heading {
+  margin-bottom: 1rem;
+}
+
+.postlist {
+  list-style: none;
+  margin: 0 -1rem -1rem;
+  padding: 0;
+}
+
+.postlist-item {
+  margin: 1rem;
+}
+
+.postlist-date {
+  color: var(--darkgray);
+  font-size: 0.8125em;
+  word-spacing: -0.03125em;
+}
+
+.tmpl-home .postlist-link {
+  display: block;
+  font-weight: 700;
+}
+
+.tag {
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.625em;
+  margin-left: 0.1em;
+  padding: 0.125em 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: text-top;
+}
+
+a[href].tag,
+a[href].tag:visited {
+  color: #fff;
+}
+
+.warning {
+  background-color: #ffc;
+  padding: 1em 0.625em;
+}
+
+.warning ol:only-child {
+  margin: 0;
+}
+
+.direct-link {
+  font-family: sans-serif;
+  font-style: normal;
+  margin-left: .1em;
+  text-decoration: none;
+}
+
+a[href].direct-link,
+a[href].direct-link:visited {
+  color: transparent;
+}
+
+a[href].direct-link:focus,
+a[href].direct-link:focus:visited,
+:hover>a[href].direct-link,
+:hover>a[href].direct-link:visited {
+  color: #aaa;
+}
+
+.intro + .intro {
+  margin-top: 1rem;
+}
+
+.sun {
+  height: var(--sun-size);
+  position: relative;
+  width: var(--sun-size);
+}
+
+.sun img,
+.sun svg {
+  border-radius: 50%;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.sun img {
+  height: 65%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  width: 65%;
+}
+
+.sun svg {
+  animation: sunrays 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes sunrays {
+  from {
+    transform: translate(-50%, -50%) rotate(-4deg);      
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(4deg);
+  }
+}

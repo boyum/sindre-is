@@ -1,0 +1,18 @@
+---
+layout: layouts/home.njk
+tags:
+  - nav
+navtitle: Home
+---
+
+<h2 class="frontpage-heading">Sindre.is</h2>
+<div class="intro">That's right - I do exist! It's my pleasure to welcome you to my area of the Internet.</div>
+<div class="intro">I'm a frontend developer solving world problems with JS and ✨CSS✨.</div>
+<div class="intro">When off work, I might write about work (shameless plug), roam the wilderness, photograph the world around me, or play a tune on my piano.</div>
+
+<h2 class="frontpage-heading">I wrote this</h2>
+{% set postslist = collections.posts | head(-3) %}
+{% include "postslist.njk" %}
+
+<p>More posts can be found in <a href="{{ '/blogging-sometimes/' | url }}">the archive</a>.</p>
+ 

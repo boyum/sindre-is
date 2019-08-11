@@ -1,24 +1,31 @@
 {
   "name": "sindre-is",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "@11ty/eleventy": "^0.8.3"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx eleventy",
+    "watch": "npx eleventy --watch --serve",
+    "debug": "DEBUG=* npx eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boyum/sindre-is.git"
+    "url": "git://github.com/11ty/eleventy-base-blog.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Sindre Bøyum",
+    "email": "sindreboyum@gmail.com",
+    "url": "https://sindre.is/"
+  },
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/boyum/sindre-is/issues"
+    "url": "https://github.com/11ty/eleventy-base-blog/issues"
   },
-  "homepage": "https://github.com/boyum/sindre-is#readme"
+  "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "@11ty/eleventy-plugin-rss": "^1.0.6",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
+    "luxon": "^1.12.0",
+    "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.0.2"
+  }
 }

@@ -1,0 +1,16 @@
+{
+  "title": "Sindre Bøyum is a 📷 and 💻 person",
+  "url": "https://sindre.is",
+  "description": "Renditions of my webdev experiences",
+  "feed": {
+    "subtitle": "Renditions of my webdev experiences",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "url": "https://sindre.isfeed/feed.xml",
+    "id": "https://sindre.is"
+  },
+  "author": {
+    "name": "Sindre Bøyum",
+    "email": "sindre.boyum@gmail.com"
+  }
+}
