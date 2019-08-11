@@ -151,12 +151,15 @@ pre {
 }
 
 .home {
-  padding: 0 1rem;
-  margin: 1rem 0;
   font-size: 1em;
+  margin: 1rem 0;
+  padding: 0 1rem;
 }
 
 .home a {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   text-decoration: none;
 }
 
@@ -262,6 +265,7 @@ a[href].direct-link:focus:visited,
 
 .sun {
   height: var(--sun-size);
+  margin-right: 1rem;
   position: relative;
   width: var(--sun-size);
 }
