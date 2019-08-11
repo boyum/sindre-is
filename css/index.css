@@ -62,6 +62,7 @@ p,
 
 a[href] {
   color: var(--blue);
+  text-decoration-color: var(--primary-color);
 }
 
 a[href]:visited {
@@ -206,6 +207,10 @@ pre {
   color: var(--darkgray);
   font-size: 0.8125em;
   word-spacing: -0.03125em;
+}
+
+.archive-link {
+  margin-top: 2rem;
 }
 
 .tmpl-home .postlist-link {
