@@ -5,7 +5,6 @@ description:
 tags: 
   - CSS 
   - HTML
-  - Frontend
 series: Understanding pseudo elements
 layout: layouts/post.njk
 ---
