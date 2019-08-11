@@ -6,6 +6,7 @@ tags:
   - CSS
   - HTML
 series: Understanding pseudo elements
+layout: layouts/post.njk
 ---
 
 
@@ -64,4 +65,5 @@ Ok, now we have a default styled button and some text that pops out whenever we 
 
 Check out the final result on CodePen:
 
-<iframe src="https://codepen.io/sindre/pen/XLELQr"></iframe>
+<iframe height="600" src="https://codepen.io/sindre/embed/XLELQr?height=600&amp;default-tab=result&amp;embed-version=2" scrolling="no" frameborder="no" allowtransparency="true" style="width: 100%;">
+</iframe>

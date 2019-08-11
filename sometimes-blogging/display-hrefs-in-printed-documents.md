@@ -13,7 +13,7 @@ Have you ever tried reading a printed out website, then instantly becoming frust
 
 Printed documents only have two dimensions, and they aren't even clickable?! How can we tell the user what the underlined text goes to?
 
-By using the `content` property together with the `attr()` CSS function, we can display the value of any attribute. As `href` is an attribute on `a` elements, surely we can display this too, right? Of course!
+By using the `content` property together with the `attr()` CSS function, we can display the value of any attribute. As `href` is an attribute on `a` elements, surely we can display this too, right? Of course!s
 
 ```html
 <a href="https://dev.to">a link with no clear sign of where it points to</a>
