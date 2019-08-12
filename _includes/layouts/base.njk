@@ -58,13 +58,27 @@
       {{ content | safe }}
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="footer-content">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+          xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" viewbox="0 0 100 100">
+          <style>
+            .signature-path {
+              fill: transparent;
+              stroke: currentColor;
+            }
+          </style>
+          <path class="signature-path signature-path--1" d="M 67 0 Q 25 16.667, 50, 33.333 T 50 66.667 Q 75 83.333, 50 100" />
+          <path class="signature-path signature-path--2" d="M 54 50 L 54 82.333" />
+        </svg>
+      </div>
+    </footer>
 
     <div class="splash-screen">
       <svg xmlns="http://www.w3.org/2000/svg" 
         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" viewbox="0 0 100 100">
         <style>
-          .signature-path {
+          .splash-signature-path {
             animation: draw-signature 4s 0.5s linear forwards;
             fill: transparent;
             stroke: currentColor;
@@ -72,7 +86,7 @@
             stroke-dashoffset: 1000;
           }
           
-          .signature-path--2 {
+          .splash-signature-path--2 {
             animation-delay: 1.25s;
           }
           
@@ -82,8 +96,8 @@
             }
           }
         </style>
-        <path class="signature-path signature-path--1" d="M 67 0 Q 25 16.667, 50, 33.333 T 50 66.667 Q 75 83.333, 50 100" />
-        <path class="signature-path signature-path--2" d="M 54 50 L 54 82.333" />
+        <path class="splash-signature-path splash-signature-path--1" d="M 67 0 Q 25 16.667, 50, 33.333 T 50 66.667 Q 75 83.333, 50 100" />
+        <path class="splash-signature-path splash-signature-path--2" d="M 54 50 L 54 82.333" />
       </svg>
     </div>
   </body>

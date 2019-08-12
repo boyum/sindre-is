@@ -25,6 +25,8 @@ html {
 
 body {
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
   font-size: calc(0.95rem + 0.5vw);
   margin: 0;
   min-height: 100vh;
@@ -65,6 +67,7 @@ a[href]:visited {
 }
 
 main {
+  flex-grow: 1;
   margin: 0 auto;
   max-width: 50rem;
   width: 90%;
@@ -77,11 +80,6 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
-/* .home,
-.nav {
-  min-width: 17.5rem;
-} */
 
 table {
   margin: 1em 0;
@@ -334,4 +332,23 @@ a[href].direct-link:focus:visited,
 
 code {
   background-color: #E0F2F1;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  margin: 4rem 0 0;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  margin: 0 auto;
+  max-width: 50rem;
+  width: 90%;
+}
+
+footer svg {
+  display: block;
+  margin: 0 auto;
+  width: calc(4rem + 5vw);
 }
