@@ -216,7 +216,7 @@ pre {
   font-weight: 700;
 }
 
-.tag {
+.postlist .tag {
   border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
   color: var(--darkgray);
