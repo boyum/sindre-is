@@ -13,8 +13,9 @@
     const SPLASH_SCREEN_DURATION = 1500;
 
     const showSplashScreen = !Boolean(sessionStorage[SPLASH_SCREEN_KEY]);
+    const forceShowSplashScreen = location.search.contains('splashscreen=true');
 
-    if (showSplashScreen) {
+    if (showSplashScreen || forceShowSplashScreen) {
       const className = 'show-splash-screen';
       document.documentElement.classList.add(className);
       sessionStorage.setItem(SPLASH_SCREEN_KEY, true);
