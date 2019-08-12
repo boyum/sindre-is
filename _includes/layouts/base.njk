@@ -10,7 +10,7 @@
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <script>
     const SPLASH_SCREEN_KEY = 'SPLASH_SCREEN_HAS_BEEN_SHOWN';
-    const SPLASH_SCREEN_DURATION = 1500;
+    const SPLASH_SCREEN_DURATION = 2000;
 
     const showSplashScreen = !Boolean(sessionStorage[SPLASH_SCREEN_KEY]);
     const forceShowSplashScreen = location.search.includes('splashscreen=true');
@@ -62,31 +62,30 @@
     <footer></footer>
 
     <div class="splash-screen">
-    <svg xmlns="http://www.w3.org/2000/svg" 
-  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" viewbox="0 0 100 100">
-  <style>
-    .signature-path {
-      animation: draw-signature 4s linear forwards;
-      fill: transparent;
-      stroke: currentColor;
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-    }
-    
-    .signature-path--2 {
-      animation-delay: .75s;
-    }
-    
-    @keyframes draw-signature {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-  </style>
-  <path class="signature-path signature-path--1" d="M 67 0 Q 25 16.667, 50, 33.333 T 50 66.667 Q 75 83.333, 50 100" />
-  <path class="signature-path signature-path--2" d="M 54 50 L 54 82.333" />
-</svg>
-      {# <img src="{{ '/img/signature.svg' | url }}" alt="" /> #}
+      <svg xmlns="http://www.w3.org/2000/svg" 
+        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" viewbox="0 0 100 100">
+        <style>
+          .signature-path {
+            animation: draw-signature 4s 0.5s linear forwards;
+            fill: transparent;
+            stroke: currentColor;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+          }
+          
+          .signature-path--2 {
+            animation-delay: 1.25s;
+          }
+          
+          @keyframes draw-signature {
+            to {
+              stroke-dashoffset: 0;
+            }
+          }
+        </style>
+        <path class="signature-path signature-path--1" d="M 67 0 Q 25 16.667, 50, 33.333 T 50 66.667 Q 75 83.333, 50 100" />
+        <path class="signature-path signature-path--2" d="M 54 50 L 54 82.333" />
+      </svg>
     </div>
   </body>
 </html>
