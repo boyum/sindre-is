@@ -331,3 +331,7 @@ a[href].direct-link:focus:visited,
   max-width: 70vw;
   width: calc(5rem + 20vw);
 }
+
+code {
+  background-color: #E0F2F1;
+}
