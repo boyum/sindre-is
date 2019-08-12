@@ -58,11 +58,11 @@ li {
   min-width: 290px;
 }
 
-li:nth-last-child(4n):first-child ~ li, 
-li:nth-last-child(4n):first-child, 
-li:nth-last-child(7n):not(:nth-last-child(14n)):first-child ~ li, 
+li:nth-last-child(4n):first-child ~ li,
+li:nth-last-child(4n):first-child,
+li:nth-last-child(7n):not(:nth-last-child(14n)):first-child ~ li,
 li:nth-last-child(7n):not(:nth-last-child(14n)):first-child {
-  flex-basis: calc(25% - (2 * var(--margin)));    
+  flex-basis: calc(25% - (2 * var(--margin)));
 }  
 ```
 
