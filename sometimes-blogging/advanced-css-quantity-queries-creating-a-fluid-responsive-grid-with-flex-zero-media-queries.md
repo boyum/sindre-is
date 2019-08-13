@@ -9,7 +9,7 @@ series: Advanced CSS
 layout: layouts/post.njk
 ---
 
-Styling for every possibility is hard. Doing the CSS work for a ✨CMS generated site✨ where you have no control of the site's markup teaches you quite a few things about making the most out of the limited tools we're blessed with. 
+Styling for every possibility is hard. Doing the CSS work for a ✨CMS generated site✨ where you have no control of the site's markup teaches you quite a few things about making the most out of the limited tools we're blessed with.
 
 ## The problem
 
@@ -76,5 +76,11 @@ See that the `flex-basis` changes whenever there's a multiple of four or seven `
 
 After a little cleanup, here's the final result! ([Go to fullscreen version](https://codepen.io/sindre/full/vqWZrz))
 
-<iframe height="600" src="https://codepen.io/sindre/embed/vqWZrz?height=600&amp;default-tab=result&amp;embed-version=2" scrolling="no" frameborder="no" allowtransparency="true" style="width: 100%;">
-</iframe>
+<iframe
+  height="600"
+  src="https://codepen.io/sindre/embed/vqWZrz?height=600&amp;default-tab=result&amp;embed-version=2"
+  scrolling="no"
+  frameborder="no"
+  allowtransparency="true"
+  style="width: 100%;"
+  title="Code from CodePen that shows the final result"></iframe>
