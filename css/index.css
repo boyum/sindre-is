@@ -319,35 +319,6 @@ a[href].direct-link:focus:visited,
   }
 }
 
-.show-splash-screen {
-  pointer-events: none;
-}
-
-.show-splash-screen .splash-screen {
-  opacity: 1;
-}
-
-.splash-screen {
-  align-items: center;
-  background-color: rgba(255, 255, 255, 1);
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity .35s ease-in-out;
-}
-
-.splash-screen svg {
-  height: calc(5rem + 20vh);
-  max-height: 70vh;
-  max-width: 70vw;
-  width: calc(5rem + 20vw);
-}
 
 code {
   background-color: #E0F2F1;

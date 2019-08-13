@@ -2,8 +2,10 @@ const { DateTime } = require("luxon");
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const Terser = require("terser");
+const CleanCSS = require("clean-css");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(pluginSyntaxHighlight);
     eleventyConfig.setDataDeepMerge(true);
@@ -26,6 +28,20 @@ module.exports = function(eleventyConfig) {
         }
 
         return array.slice(0, n);
+    });
+
+    eleventyConfig.addFilter("minifyCSS", function (code) {
+        return new CleanCSS({}).minify(code).styles;
+    });
+
+    eleventyConfig.addFilter("minifyJS", function (code) {
+        let minified = Terser.minify(code);
+        if (minified.error) {
+            console.log("Terser error: ", minified.error);
+            return code;
+        }
+
+        return minified.code;
     });
 
     eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
@@ -53,7 +69,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.setBrowserSyncConfig({
         callbacks: {
-            ready: function(err, browserSync) {
+            ready: function (err, browserSync) {
                 const content_404 = fs.readFileSync('public/404.html');
 
                 browserSync.addMiddleware("*", (req, res) => {
