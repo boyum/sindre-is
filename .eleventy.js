@@ -4,10 +4,17 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Terser = require("terser");
 const CleanCSS = require("clean-css");
+const pluginPWA = require('eleventy-plugin-pwa');
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(pluginSyntaxHighlight);
+
+    eleventyConfig.addPlugin(pluginPWA, {
+        clientsClaim: true,
+        skipWaiting: true,
+    });
+
     eleventyConfig.setDataDeepMerge(true);
 
     eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
@@ -48,6 +55,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("img");
     eleventyConfig.addPassthroughCopy("css");
+    eleventyConfig.addPassthroughCopy("manifest.json");
 
     /* Markdown Plugins */
     let markdownIt = require("markdown-it");

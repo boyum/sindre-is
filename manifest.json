@@ -1,0 +1,8 @@
+{
+  "name": "The life of Sindre",
+  "short_name": "sindre.is",
+  "theme_color": "#009688",
+  "background_color": "#009688",
+  "display": "standalone",
+  "start_url": "/"
+}

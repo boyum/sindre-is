@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-    
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#009688" />
+
     <style>
     {% set criticalCSS %}
       {% include 'critical.css' %}
@@ -98,5 +100,15 @@
         <path class="splash-signature-path splash-signature-path--2" d="M 54 50 L 54 82.333" />
       </svg>
     </div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+        .then(
+          () => {}, 
+          error => console.error('Couldn\'t register service worker', error)
+        );
+      }
+    </script>
   </body>
 </html>
