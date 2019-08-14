@@ -13,6 +13,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginPWA, {
         clientsClaim: true,
         skipWaiting: true,
+        runtimeCaching: [
+            '/img/sindre.jpeg',
+        ],
     });
 
     eleventyConfig.setDataDeepMerge(true);
