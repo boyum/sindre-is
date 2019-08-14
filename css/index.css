@@ -58,8 +58,9 @@ p:last-child {
 
 p,
 .tmpl-post li,
-img {
-  max-width: 37.5em;
+img,
+.post-tags {
+  max-width: 37.5rem;
 }
 
 p,
