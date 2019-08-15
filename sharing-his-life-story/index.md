@@ -1,13 +1,16 @@
 ---
-layout: layouts/post.njk
+layout: layouts/about.njk
 title: About Me
 tags:
   - nav
 navtitle: About
-templateClass: tmpl-post
 ---
 
 I am a person who writes stuff on computers 👩‍💻.
+
+## Soon, I will
+
+- ✨ Be working at [Evry](https://www.evry.com) as a senior consultant specializing in frontend and web technologies
 
 ## Currently, I am
 
