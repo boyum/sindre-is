@@ -13,9 +13,14 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginPWA, {
         clientsClaim: true,
         skipWaiting: true,
-        runtimeCaching: [
-            '/img/sindre.jpeg',
-        ],
+        runtimeCaching: [{
+            urlPattern: /\/img\/\.(?:png|gif|jpg|jpeg|webp|svg)$/,
+            handler: "cacheFirst",
+        },
+        {
+            urlPattern: "/service-worker.js",
+            handler: "networkFirst",
+        }],
     });
 
     eleventyConfig.setDataDeepMerge(true);
@@ -59,6 +64,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("img");
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("manifest.json");
+    // eleventyConfig.addPassthroughCopy("service-worker.js");
 
     /* Markdown Plugins */
     let markdownIt = require("markdown-it");
