@@ -6,7 +6,7 @@ tags:
 navtitle: About
 ---
 
-I am a person who writes stuff on computers 👩‍💻.
+I am a person who writes stuff on computers 👩‍💻
 
 ## Soon, I will
 
