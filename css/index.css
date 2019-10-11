@@ -5,6 +5,22 @@
 
   --primary-color: #009688;
   --sun-size: 5rem;
+
+  --background-color: #fff;
+  --text-color: var(--darkgray);
+  --visited-link-color: var(--navy);
+  --code-background-color: #E0F2F1;
+  --heading-color: var(--primary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--darkgray);
+    --text-color: var(--lightgray);
+    --visited-link-color: #fff;
+    --code-background-color: #222;
+    --heading-color: var(--lightgray);
+  }
 }
 
 *,
@@ -18,14 +34,14 @@
 }
 
 html {
-  color: var(--darkgray);
+  color: var(--text-color);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: calc(0.95rem + 0.5vw);
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -36,11 +52,11 @@ body {
 .visually-hidden {
 	border:0 !important;
 	clip: rect(1px, 1px, 1px, 1px);
-	height: 1px !important; 
+	height: 1px !important;
 	overflow: hidden;
 	padding:0 !important;
 	position: absolute !important;
-	width: 1px !important; 
+	width: 1px !important;
 }
 
 h1,
@@ -49,7 +65,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--primary-color);
+  color: var(--heading-color);
 }
 
 p:last-child {
@@ -69,12 +85,12 @@ p,
 }
 
 a[href] {
-  color: var(--darkgray);
+  color: inherit;
   text-decoration-color: var(--primary-color);
 }
 
 a[href]:visited {
-  color: var(--navy);
+  color: var(--visited-link-color);
 }
 
 main {
@@ -110,19 +126,17 @@ code {
   line-height: 1.5;
 }
 
-pre {
-  background-color: #f6f6f6;
-  direction: ltr;
+.tmpl-post pre[class*="language"] {
+  border-radius: 0.5rem;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.17),
+    0 2px 2px rgba(0, 0, 0, 0.17),
+    0 4px 4px rgba(0, 0, 0, 0.17),
+    0 8px 8px rgba(0, 0, 0, 0.17),
+    0 16px 16px rgba(0, 0, 0, 0.17);
   font-size: 0.875rem;
-  hyphens: none;
-  line-height: 1.375;
-  margin: 0.5em 0;
-  padding: 1em;
-  tab-size: 2;
-  text-align: left;
-  white-space: pre;
-  word-break: normal;
-  word-spacing: normal;
+  margin: 0.5em 0 2em;
+  padding: 1.5em 1em;
 }
 
 .highlight-line {
@@ -211,7 +225,7 @@ pre {
 }
 
 .postlist-date {
-  color: var(--darkgray);
+  color: var(--text-color);
   font-size: 0.8125em;
   word-spacing: -0.03125em;
 }
@@ -229,7 +243,7 @@ pre {
 .postlist .tag {
   border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
-  color: var(--darkgray);
+  color: var(--text-color);
   display: inline-block;
   font-size: 0.625em;
   margin-left: 0.1em;
@@ -248,7 +262,7 @@ pre {
 
 a[href].tag,
 a[href].tag:visited {
-  color: var(--darkgray);
+  color: var(--text-color);
 }
 
 .warning {
@@ -322,7 +336,7 @@ a[href].direct-link:focus:visited,
 
 
 code {
-  background-color: #E0F2F1;
+  background-color: var(--code-background-color);
 }
 
 footer {
