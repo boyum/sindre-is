@@ -27,3 +27,9 @@
   max-width: 70vw;
   width: calc(5rem + 20vw);
 }
+
+@media (prefers-color-scheme: dark) {
+  .splash-screen {
+    background-color: #333;
+  }
+}
