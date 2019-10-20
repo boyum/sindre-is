@@ -1,5 +1,5 @@
 name: Audit pull request
-on: pull_request
+on: push
 
 jobs:
   audit:
@@ -7,3 +7,4 @@ jobs:
     steps:
       - name: Lighthouse Audit
         uses: jakejarvis/lighthouse-action@v0.3.2
+        with: https://sindre.is
