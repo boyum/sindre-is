@@ -7,4 +7,5 @@ jobs:
     steps:
       - name: Lighthouse Audit
         uses: jakejarvis/lighthouse-action@v0.3.2
-        with: https://sindre.is
+        with:
+          url: 'https://sindre.is'
