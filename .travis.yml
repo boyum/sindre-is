@@ -3,7 +3,7 @@ node_js:
   - 8
 before_script:
   - npm install @11ty/eleventy -g
-script: eleventy --pathprefix="/sindre-is/"
+script: npm run lint && eleventy --pathprefix="/sindre-is/"
 deploy:
   local-dir: public
   provider: pages
