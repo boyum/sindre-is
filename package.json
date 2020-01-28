@@ -5,7 +5,7 @@
     "build": "npx eleventy",
     "watch": "npx eleventy --watch --serve",
     "debug": "DEBUG=* npx eleventy",
-    "test": "CRASH ME",
+    "test": "echo 'test'",
     "travis": "npm run test"
   },
   "repository": {
