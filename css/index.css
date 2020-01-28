@@ -9,7 +9,7 @@
   --background-color: #fff;
   --text-color: var(--darkgray);
   --visited-link-color: var(--navy);
-  --code-background-color: #E0F2F1;
+  --code-background-color: #e0f2f1;
   --heading-color: var(--primary-color);
 }
 
@@ -35,8 +35,8 @@
 
 html {
   color: var(--text-color);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: calc(0.95rem + 0.5vw);
 }
 
@@ -50,13 +50,13 @@ body {
 }
 
 .visually-hidden {
-	border:0 !important;
-	clip: rect(1px, 1px, 1px, 1px);
-	height: 1px !important;
-	overflow: hidden;
-	padding:0 !important;
-	position: absolute !important;
-	width: 1px !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
 }
 
 h1,
@@ -119,20 +119,17 @@ table th {
 
 pre,
 code {
-  font-family: 'Fira Code', Consolas, Menlo, Monaco, 'Andale Mono WT',
-    'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter',
-    'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono',
-    'Nimbus Mono L', 'Courier New', Courier, monospace;
+  font-family: "Fira Code", Consolas, Menlo, Monaco, "Andale Mono WT",
+    "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono",
+    "Nimbus Mono L", "Courier New", Courier, monospace;
   line-height: 1.5;
 }
 
 .tmpl-post pre[class*="language"] {
   border-radius: 0.5rem;
-  box-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.17),
-    0 2px 2px rgba(0, 0, 0, 0.17),
-    0 4px 4px rgba(0, 0, 0, 0.17),
-    0 8px 8px rgba(0, 0, 0, 0.17),
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.17), 0 2px 2px rgba(0, 0, 0, 0.17),
+    0 4px 4px rgba(0, 0, 0, 0.17), 0 8px 8px rgba(0, 0, 0, 0.17),
     0 16px 16px rgba(0, 0, 0, 0.17);
   font-size: 0.875rem;
   margin: 0.5em 0 2em;
@@ -147,7 +144,7 @@ code {
 }
 
 .highlight-line:empty::before {
-  content: ' ';
+  content: " ";
 }
 
 .highlight-line + br {
@@ -244,7 +241,10 @@ code {
   margin-bottom: 1rem;
 }
 
-@supports(((background-clip: text) or (-webkit-background-clip: text)) and (-webkit-text-fill-color: transparent)) {
+@supports (
+  ((background-clip: text) or (-webkit-background-clip: text)) and
+    (-webkit-text-fill-color: transparent)
+) {
   .tmpl-home h1 {
     -webkit-background-attachment: fixed;
     background-attachment: fixed;
@@ -252,125 +252,124 @@ code {
     background-clip: text;
     /*background-image: url(https://images.unsplash.com/photo-1498612753354-772a30629934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);*/
     background-image: url(https://picsum.photos/400/800/);
-    -webkit-text-fill-color: transparent;	
-  }	
-}	
+    -webkit-text-fill-color: transparent;
+  }
+}
 
-.post-tags .tag,	
-.postlist .tag {	
-  border: 1px solid var(--primary-color);	
-  border-radius: 0.5rem;	
-  color: var(--text-color);	
-  display: inline-block;	
-  font-size: 0.625em;	
-  margin-left: 0.1em;	
-  padding: 0.125em 0.5em;	
-  text-decoration: none;	
-  text-transform: uppercase;	
-}	
+.post-tags .tag,
+.postlist .tag {
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  display: inline-block;
+  font-size: 0.625em;
+  margin-left: 0.1em;
+  padding: 0.125em 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 
-.post-tags {	
-  border: 0.0625rem dashed var(--lightgray);	
-  border-left: 0;	
-  border-right: 0;	
-  font-size: 0.8rem;	
-  padding: 0.5em 0;	
-}	
+.post-tags {
+  border: 0.0625rem dashed var(--lightgray);
+  border-left: 0;
+  border-right: 0;
+  font-size: 0.8rem;
+  padding: 0.5em 0;
+}
 
-a[href].tag,	
-a[href].tag:visited {	
-  color: var(--text-color);	
-}	
+a[href].tag,
+a[href].tag:visited {
+  color: var(--text-color);
+}
 
-.warning {	
-  background-color: #ffc;	
-  padding: 1em 0.625em;	
-}	
+.warning {
+  background-color: #ffc;
+  padding: 1em 0.625em;
+}
 
-.warning ol:only-child {	
-  margin: 0;	
-}	
+.warning ol:only-child {
+  margin: 0;
+}
 
-.direct-link {	
-  font-family: sans-serif;	
-  font-style: normal;	
-  margin-left: 0.1em;	
-  text-decoration: none;	
-}	
+.direct-link {
+  font-family: sans-serif;
+  font-style: normal;
+  margin-left: 0.1em;
+  text-decoration: none;
+}
 
-a[href].direct-link,	
-a[href].direct-link:visited {	
-  color: transparent;	
-}	
+a[href].direct-link,
+a[href].direct-link:visited {
+  color: transparent;
+}
 
-a[href].direct-link:focus,	
-a[href].direct-link:focus:visited,	
-:hover > a[href].direct-link,	
-:hover > a[href].direct-link:visited {	
-  color: #aaa;	
-}	
+a[href].direct-link:focus,
+a[href].direct-link:focus:visited,
+:hover > a[href].direct-link,
+:hover > a[href].direct-link:visited {
+  color: #aaa;
+}
 
-.intro + .intro {	
-  margin-top: 1rem;	
-}	
+.intro + .intro {
+  margin-top: 1rem;
+}
 
-.sun {	
-  height: var(--sun-size);	
-  margin-right: 1rem;	
-  position: relative;	
-  width: var(--sun-size);	
-}	
+.sun {
+  height: var(--sun-size);
+  margin-right: 1rem;
+  position: relative;
+  width: var(--sun-size);
+}
 
-.sun img,	
-.sun svg {	
-  border-radius: 50%;	
-  height: 100%;	
-  left: 50%;	
-  position: absolute;	
-  top: 50%;	
-  width: 100%;	
-}	
+.sun img,
+.sun svg {
+  border-radius: 50%;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
 
-.sun img {	
-  height: 65%;	
-  object-fit: contain;	
-  transform: translate(-50%, -50%);	
-  width: 65%;	
-}	
+.sun img {
+  height: 65%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  width: 65%;
+}
 
-.sun svg {	
-  animation: sunrays 1.5s ease-in-out infinite alternate;	
-}	
+.sun svg {
+  animation: sunrays 1.5s ease-in-out infinite alternate;
+}
 
-@keyframes sunrays {	
-  from {	
-    transform: translate(-50%, -50%) rotate(-4deg);	
-  }	
-  to {	
-    transform: translate(-50%, -50%) rotate(4deg);	
-  }	
-}	
+@keyframes sunrays {
+  from {
+    transform: translate(-50%, -50%) rotate(-4deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(4deg);
+  }
+}
 
+code {
+  background-color: var(--code-background-color);
+}
 
-code {	
-  background-color: var(--code-background-color);	
-}	
+footer {
+  background-color: #222;
+  color: #fff;
+  margin: 4rem 0 0;
+  padding: 2rem 0;
+}
 
-footer {	
-  background-color: #222;	
-  color: #fff;	
-  margin: 4rem 0 0;	
-  padding: 2rem 0;	
-}	
+.footer-content {
+  margin: 0 auto;
+  max-width: 50rem;
+  width: 90%;
+}
 
-.footer-content {	
-  margin: 0 auto;	
-  max-width: 50rem;	
-  width: 90%;	
-}	
-
-footer svg {	
-  display: block;	
-  margin: 0 auto;	
-  width: calc(4rem + 5vw);	
+footer svg {
+  display: block;
+  margin: 0 auto;
+  width: calc(4rem + 5vw);
 }
