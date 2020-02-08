@@ -272,7 +272,9 @@ code {
   font-size: 0.725em;
   margin-left: 0.1em;
   margin-top: 0.25em;
+  min-width: 3rem;
   padding: 0.25em 0.75em;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 }
