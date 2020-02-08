@@ -1,7 +1,7 @@
 const SPLASH_SCREEN_KEY = 'SPLASH_SCREEN_HAS_BEEN_SHOWN';
 const SPLASH_SCREEN_DURATION = 2000;
 
-const showSplashScreen = !Boolean(sessionStorage[SPLASH_SCREEN_KEY]);
+const showSplashScreen = false && !Boolean(sessionStorage[SPLASH_SCREEN_KEY]);
 const forceShowSplashScreen = location.search.includes('splashscreen=true');
 
 if (showSplashScreen || forceShowSplashScreen) {
