@@ -266,12 +266,13 @@ code {
 .post-tags .tag,
 .postlist .tag {
   border: 0.0625rem solid var(--primary-color);
-  border-radius: 0.5rem;
+  border-radius: 1000rem;
   color: var(--text-color);
   display: inline-block;
-  font-size: 0.625em;
+  font-size: 0.725em;
   margin-left: 0.1em;
-  padding: 0.125em 0.5em;
+  margin-top: 0.25em;
+  padding: 0.25em 0.75em;
   text-decoration: none;
   text-transform: uppercase;
 }
