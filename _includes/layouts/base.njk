@@ -19,12 +19,6 @@
     {% endset %}
     {{ criticalCSS | minifyCSS | safe }}
     </style>
-    <script>
-    {% set splashScreenJS %}
-      {% include 'show-splash-screen.js' %}
-    {% endset %}
-    {{ splashScreenJS | minifyJS | safe }}
-    </script>
   </head>
   <body>
     <header>
@@ -37,7 +31,7 @@
               <style>
                 .sun-path {
                   fill: transparent;
-                  stroke: #ff9800; 
+                  stroke: #ff9800;
                   stroke-width: 3;
                 }
               </style>
@@ -62,7 +56,7 @@
 
     <footer>
       <div class="footer-content">
-        <svg xmlns="http://www.w3.org/2000/svg" 
+        <svg xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" viewbox="0 0 100 100">
           <style>
             .signature-path {
@@ -77,7 +71,7 @@
     </footer>
 
     <div class="splash-screen">
-      <svg xmlns="http://www.w3.org/2000/svg" 
+      <svg xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" viewbox="0 0 100 100">
         <style>
           .splash-signature-path {
@@ -87,11 +81,11 @@
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
           }
-          
+
           .splash-signature-path--2 {
             animation-delay: 1.25s;
           }
-          
+
           @keyframes draw-signature {
             to {
               stroke-dashoffset: 0;
@@ -107,7 +101,7 @@
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/service-worker.js')
         .then(
-          () => {}, 
+          () => {},
           error => console.error('Couldn\'t register service worker', error)
         );
       }
