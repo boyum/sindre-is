@@ -14,7 +14,7 @@ module.exports = function (eleventyConfig) {
         clientsClaim: true,
         skipWaiting: true,
         runtimeCaching: [{
-            urlPattern: /\/img\/\.(?:png|gif|jpg|jpeg|webp|svg)$/,
+            urlPattern: /\/img\/.+\.(?:png|gif|jpg|jpeg|webp|svg)$/,
             handler: "cacheFirst",
         },
         {
