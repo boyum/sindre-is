@@ -2,10 +2,8 @@
   --darkgray: #333;
   --lightgray: #e0e0e0;
   --navy: #17050f;
-
   --primary-color: #2885d7;
   --sun-size: 5rem;
-
   --background-color: #fff;
   --text-color: var(--darkgray);
   --visited-link-color: var(--navy);
@@ -35,8 +33,17 @@
 
 html {
   color: var(--text-color);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
   font-size: calc(0.95rem + 0.5vw);
 }
 
@@ -51,12 +58,12 @@ body {
 
 .visually-hidden {
   border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px !important;
+  clip: rect(0.0625rem, 0.0625rem, 0.0625rem, 0.0625rem);
+  height: 0.0625rem !important;
   overflow: hidden;
   padding: 0 !important;
   position: absolute !important;
-  width: 1px !important;
+  width: 0.0625rem !important;
 }
 
 h1,
@@ -119,18 +126,33 @@ table th {
 
 pre,
 code {
-  font-family: "Fira Code", Consolas, Menlo, Monaco, "Andale Mono WT",
-    "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
-    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono",
-    "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-family:
+    "Fira Code",
+    Consolas,
+    Menlo,
+    Monaco,
+    "Andale Mono WT",
+    "Andale Mono",
+    "Lucida Console",
+    "Lucida Sans Typewriter",
+    "DejaVu Sans Mono",
+    "Bitstream Vera Sans Mono",
+    "Liberation Mono",
+    "Nimbus Mono L",
+    "Courier New",
+    Courier,
+    monospace;
   line-height: 1.5;
 }
 
 .tmpl-post pre[class*="language"] {
   border-radius: 0.5rem;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.17), 0 2px 2px rgba(0, 0, 0, 0.17),
-    0 4px 4px rgba(0, 0, 0, 0.17), 0 8px 8px rgba(0, 0, 0, 0.17),
-    0 16px 16px rgba(0, 0, 0, 0.17);
+  box-shadow:
+    0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.17),
+    0 0.125rem 0.125rem rgba(0, 0, 0, 0.17),
+    0 0.25rem 0.25rem rgba(0, 0, 0, 0.17),
+    0 0.5rem 0.5rem rgba(0, 0, 0, 0.17),
+    0 1rem 1rem rgba(0, 0, 0, 0.17);
   font-size: 0.875rem;
   margin: 0.5em 0 2em;
   padding: 1.5em 1em;
@@ -152,8 +174,8 @@ code {
 }
 
 .highlight-line-isdir {
-  color: #b0b0b0;
   background-color: #222;
+  color: #b0b0b0;
 }
 
 .highlight-line-active {
@@ -243,14 +265,15 @@ code {
 
 @supports (
   ((background-clip: text) or (-webkit-background-clip: text)) and
-    (-webkit-text-fill-color: transparent)
+  (-webkit-text-fill-color: transparent)
 ) {
   .tmpl-home h1 {
     -webkit-background-attachment: fixed;
     background-attachment: fixed;
     -webkit-background-clip: text;
     background-clip: text;
-    /*background-image: url(https://images.unsplash.com/photo-1498612753354-772a30629934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);*/
+
+    /* background-image: url(https://images.unsplash.com/photo-1498612753354-772a30629934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80); */
     background-image: url(https://picsum.photos/400/800/);
     -webkit-text-fill-color: transparent;
   }
@@ -258,7 +281,7 @@ code {
 
 .post-tags .tag,
 .postlist .tag {
-  border: 1px solid var(--primary-color);
+  border: 0.0625rem solid var(--primary-color);
   border-radius: 0.5rem;
   color: var(--text-color);
   display: inline-block;
@@ -346,6 +369,7 @@ a[href].direct-link:focus:visited,
   from {
     transform: translate(-50%, -50%) rotate(-4deg);
   }
+
   to {
     transform: translate(-50%, -50%) rotate(4deg);
   }
