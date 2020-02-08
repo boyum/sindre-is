@@ -9,7 +9,7 @@
   --background-color: #fff;
   --text-color: var(--darkgray);
   --visited-link-color: var(--navy);
-  --code-background-color: #E0F2F1;
+  --code-background-color: #e0f2f1;
   --heading-color: var(--primary-color);
 }
 
@@ -35,8 +35,8 @@
 
 html {
   color: var(--text-color);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: calc(0.95rem + 0.5vw);
 }
 
@@ -50,13 +50,13 @@ body {
 }
 
 .visually-hidden {
-	border:0 !important;
-	clip: rect(1px, 1px, 1px, 1px);
-	height: 1px !important;
-	overflow: hidden;
-	padding:0 !important;
-	position: absolute !important;
-	width: 1px !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
 }
 
 h1,
@@ -119,20 +119,17 @@ table th {
 
 pre,
 code {
-  font-family: 'Fira Code', Consolas, Menlo, Monaco, 'Andale Mono WT',
-    'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter',
-    'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono',
-    'Nimbus Mono L', 'Courier New', Courier, monospace;
+  font-family: "Fira Code", Consolas, Menlo, Monaco, "Andale Mono WT",
+    "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono",
+    "Nimbus Mono L", "Courier New", Courier, monospace;
   line-height: 1.5;
 }
 
 .tmpl-post pre[class*="language"] {
   border-radius: 0.5rem;
-  box-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.17),
-    0 2px 2px rgba(0, 0, 0, 0.17),
-    0 4px 4px rgba(0, 0, 0, 0.17),
-    0 8px 8px rgba(0, 0, 0, 0.17),
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.17), 0 2px 2px rgba(0, 0, 0, 0.17),
+    0 4px 4px rgba(0, 0, 0, 0.17), 0 8px 8px rgba(0, 0, 0, 0.17),
     0 16px 16px rgba(0, 0, 0, 0.17);
   font-size: 0.875rem;
   margin: 0.5em 0 2em;
@@ -147,7 +144,7 @@ code {
 }
 
 .highlight-line:empty::before {
-  content: ' ';
+  content: " ";
 }
 
 .highlight-line + br {
@@ -237,6 +234,26 @@ code {
 .tmpl-home .postlist-link {
   display: block;
   font-weight: 700;
+}
+
+.tmpl-home h1 {
+  font-size: 4.1rem;
+  margin-bottom: 1rem;
+}
+
+@supports (
+  ((background-clip: text) or (-webkit-background-clip: text)) and
+    (-webkit-text-fill-color: transparent)
+) {
+  .tmpl-home h1 {
+    -webkit-background-attachment: fixed;
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /*background-image: url(https://images.unsplash.com/photo-1498612753354-772a30629934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);*/
+    background-image: url(https://picsum.photos/400/800/);
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .post-tags .tag,
@@ -333,7 +350,6 @@ a[href].direct-link:focus:visited,
     transform: translate(-50%, -50%) rotate(4deg);
   }
 }
-
 
 code {
   background-color: var(--code-background-color);

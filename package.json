@@ -4,7 +4,9 @@
   "scripts": {
     "build": "npx eleventy",
     "watch": "npx eleventy --watch --serve",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "DEBUG=* npx eleventy",
+    "test": "echo 'test'",
+    "travis": "npm run test"
   },
   "repository": {
     "type": "git",
