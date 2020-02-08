@@ -401,19 +401,6 @@ footer svg {
   position: relative;
 }
 
-.image-container::after {
-  backdrop-filter: grayscale(0.7);
-  bottom: 0;
-  content: '';
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: opacity 0.3s ease-in-out;
-  z-index: 2;
-}
-
 .image-container:hover .image-description,
 .image-container:focus .image-description {
   transform: none;
@@ -430,7 +417,6 @@ footer svg {
   font-style: italic;
   padding: 0.5rem;
   text-align: right;
-  transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -440,4 +426,23 @@ footer svg {
   max-width: 100%;
   position: relative;
   z-index: 1;
+}
+
+@media not all and (hover: none) {
+  .image-container::after {
+    backdrop-filter: grayscale(0.7);
+    bottom: 0;
+    content: '';
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+  }
+
+  .image-description {
+    transform: translateY(-100%);
+  }
 }
