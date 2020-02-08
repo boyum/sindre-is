@@ -7,7 +7,9 @@
     "debug": "DEBUG=* npx eleventy",
     "stylelint": "stylelint ./css/index.css",
     "stylelint-fix": "npm run stylelint -- --fix",
-    "lint": "npm run stylelint"
+    "lint": "npm run stylelint",
+    "test": "echo 'test'",
+    "travis": "npm run test"
   },
   "repository": {
     "type": "git",
