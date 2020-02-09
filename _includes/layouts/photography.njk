@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-photography
+---
+<link rel="stylesheet" href="{{ '/css/photography.css' | url }}" />
+<h1 class="post-title">{{ title }}</h1>
+
+{{ content | safe }}
+
+<div class="images">
+  {%- for image in images -%}
+  <a href="{{image.unsplashUrl}}" class="image-container">
+    <img class="image" src="{{image.imageUrl}}" alt="{{image.alt}}" width="504" height="377" onload="this.style.opacity=1" />
+    <div class="image-description" aria-hidden="true">{{image.alt}}</div>
+  </a>
+  {%- endfor -%}
+</div>
+
+<p><a href="{{ '/' | url }}">← Home</a></p>
