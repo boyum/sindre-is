@@ -18,7 +18,8 @@
   position: fixed;
   right: 0;
   top: 0;
-  transition: opacity .35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+  z-index: 10;
 }
 
 .splash-screen svg {

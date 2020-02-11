@@ -5,9 +5,10 @@
     "build": "npx eleventy",
     "watch": "npx eleventy --watch --serve",
     "debug": "DEBUG=* npx eleventy",
-    "stylelint": "stylelint ./css/index.css",
+    "stylelint": "stylelint **/*.css",
     "stylelint-fix": "npm run stylelint -- --fix",
     "lint": "npm run stylelint",
+    "fix-lint": "nmp run stylelint-fix",
     "test": "echo 'test'",
     "travis": "npm run test",
     "percy": "npm run build && percy snapshot ./_site"
