@@ -163,39 +163,6 @@ code {
   padding: 1.5em 1em;
 }
 
-.highlight-line {
-  color: inherit;
-  display: block;
-  padding: 0.125em 1em;
-  text-decoration: none;
-}
-
-.highlight-line:empty::before {
-  content: " ";
-}
-
-.highlight-line + br {
-  display: none;
-}
-
-.highlight-line-isdir {
-  background-color: #222;
-  color: #b0b0b0;
-}
-
-.highlight-line-active {
-  background-color: #444;
-  background-color: hsla(0, 0%, 27%, 0.8);
-}
-
-.highlight-line-add {
-  background-color: #45844b;
-}
-
-.highlight-line-remove {
-  background-color: #902f2f;
-}
-
 .home {
   font-size: 1em;
   margin: 1rem 0;
