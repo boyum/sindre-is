@@ -1,0 +1,7 @@
+---
+permalink: css/photography.min.css
+---
+{% set css %}
+  {% include "css/photography.css" %}
+{% endset %}
+{{ css | minifyCSS | safe }}

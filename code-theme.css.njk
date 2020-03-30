@@ -1,0 +1,7 @@
+---
+permalink: css/prism-base16-monokai.dark.min.css
+---
+{% set css %}
+  {% include "css/prism-base16-monokai.dark.css" %}
+{% endset %}
+{{ css | minifyCSS | safe }}
