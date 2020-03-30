@@ -1,0 +1,7 @@
+---
+permalink: css/index.min.css
+---
+{% set css %}
+  {% include "css/index.css" %}
+{% endset %}
+{{ css | minifyCSS | safe }}
