@@ -1,11 +1,17 @@
 :root {
-  --darkgray: #333;
-  --lightgray: #e0e0e0;
+  --gray-800: #222;
+  --gray-700: #333;
+  --gray-600: #555;
+  --gray-200: #e0e0e0;
+  --gray-100: #f2f2f2;
   --navy: #17050f;
   --primary-color: #2866d7;
   --sun-size: 5rem;
   --background-color: #fff;
-  --text-color: var(--darkgray);
+  --background-color--inverse: var(--gray-700);
+  --secondary-background-color: var(--gray-200);
+  --secondary-background-color--inverse: var(--gray-600);
+  --text-color: var(--gray-700);
   --visited-link-color: var(--navy);
   --code-background-color: #e0f2f1;
   --heading-color: var(--primary-color);
@@ -13,11 +19,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: var(--darkgray);
-    --text-color: var(--lightgray);
+    --background-color: var(--gray-700);
+    --background-color--inverse: var(--gray-100);
+    --secondary-background-color: var(--gray-600);
+    --secondary-background-color--inverse: var(--gray-200);
+    --text-color: var(--gray-200);
     --visited-link-color: #fff;
-    --code-background-color: #222;
-    --heading-color: var(--lightgray);
+    --code-background-color: var(--gray-800);
+    --heading-color: var(--gray-200);
   }
 }
 
@@ -114,7 +123,7 @@ main {
 
 header {
   align-items: center;
-  border-bottom: 0.0625rem dashed var(--lightgray);
+  border-bottom: 0.0625rem dashed var(--gray-200);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -249,7 +258,7 @@ code {
 }
 
 .post-tags {
-  border: 0.0625rem dashed var(--lightgray);
+  border: 0.0625rem dashed var(--gray-200);
   border-left: 0;
   border-right: 0;
   font-size: 0.8rem;
