@@ -6,7 +6,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Terser = require("terser");
 const CleanCSS = require("clean-css");
-const pluginPWA = require('eleventy-plugin-pwa');
+// const pluginPWA = require('eleventy-plugin-pwa');
 const htmlmin = require("html-minifier");
 
 module.exports = function(eleventyConfig) {
