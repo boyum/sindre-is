@@ -13,19 +13,19 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
-  eleventyConfig.addPlugin(pluginPWA, {
-    clientsClaim: true,
-    skipWaiting: true,
-    runtimeCaching: [{
-        urlPattern: /\/img\/.+\.(?:png|gif|jpg|jpeg|webp|svg)$/,
-        handler: "cacheFirst",
-      },
-      {
-        urlPattern: "/service-worker.js",
-        handler: "networkFirst",
-      }
-    ],
-  });
+  // eleventyConfig.addPlugin(pluginPWA, {
+  //   clientsClaim: true,
+  //   skipWaiting: true,
+  //   runtimeCaching: [{
+  //       urlPattern: /\/img\/.+\.(?:png|gif|jpg|jpeg|webp|svg)$/,
+  //       handler: "cacheFirst",
+  //     },
+  //     {
+  //       urlPattern: "/service-worker.js",
+  //       handler: "networkFirst",
+  //     }
+  //   ],
+  // });
 
   eleventyConfig.setDataDeepMerge(true);
 
