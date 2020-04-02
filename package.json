@@ -36,7 +36,7 @@
     "html-minifier": "^4.0.0",
     "luxon": "^1.22.2",
     "markdown-it": "^8.4.2",
-    "markdown-it-anchor": "^5.2.5",
+    "markdown-it-anchor": "^5.2.7",
     "stylelint": "^13.2.1",
     "stylelint-config-standard": "^19.0.0",
     "stylelint-order": "^4.0.0"
