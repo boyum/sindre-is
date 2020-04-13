@@ -36,13 +36,13 @@
     "html-minifier": "^4.0.0",
     "luxon": "^1.23.0",
     "markdown-it": "^8.4.2",
-    "markdown-it-anchor": "^5.2.5",
+    "markdown-it-anchor": "^5.2.7",
     "stylelint": "^13.2.1",
     "stylelint-config-standard": "^19.0.0",
     "stylelint-order": "^4.0.0"
   },
   "dependencies": {
     "clean-css": "^4.2.3",
-    "terser": "^4.6.7"
+    "terser": "^4.6.10"
   }
 }
