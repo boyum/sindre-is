@@ -1,7 +1,7 @@
 const cellsPerRow = 10;
 const modes = {
-  OPENING_CELLS: 'Opening cells',
-  CLOSING_CELLS: 'Closing cells',
+  OPENING_CELLS : 'Opening cells',
+  CLOSING_CELLS : 'Closing cells',
 };
 
 let remainingLives = 3;
@@ -24,7 +24,8 @@ function setup() {
   array = initNonogram();
 
   for (let i = 0; i < cellsPerRow; i++) {
-    const row = array.slice(i * cellsPerRow, (i + 1) * cellsPerRow, cellsPerRow);
+    const row =
+        array.slice(i * cellsPerRow, (i + 1) * cellsPerRow, cellsPerRow);
     horizontalGroups.push(findGroups(row));
 
     const column = array.filter((_, index) => index % cellsPerRow === i);
@@ -74,27 +75,20 @@ function draw() {
 }
 
 /* prevents the mobile browser from processing some default
-  * touch events, like swiping left for "back" or scrolling
-  * the page.
-  */
+ * touch events, like swiping left for "back" or scrolling
+ * the page.
+ */
 function touchStarted(event) {
   onClick(event);
   return false;
 }
 
-function touchMoved() {
-  return false;
-}
+function touchMoved() { return false; }
 
-function touchEnded() {
-  return false;
-}
+function touchEnded() { return false; }
 
 function onClick(event) {
-  const {
-    offsetX,
-    offsetY
-  } = event;
+  const {offsetX, offsetY} = event;
 
   const cell = findCell(offsetX, offsetY);
   if (!cell) {
@@ -105,9 +99,7 @@ function onClick(event) {
   drawCell(cell);
 }
 
-function mouseStarted(event) {
-  onClick(event);
-}
+function mouseStarted(event) { onClick(event); }
 
 function clickCell(cell) {
   if (cell.clicked) {
@@ -140,7 +132,8 @@ function clickEmptyCell(cell) {
 }
 
 function toggleMode() {
-  mode = mode === modes.OPENING_CELLS ? modes.CLOSING_CELLS : modes.OPENING_CELLS;
+  mode =
+      mode === modes.OPENING_CELLS ? modes.CLOSING_CELLS : modes.OPENING_CELLS;
   modeButton.elt.innerText = `Mode: ${mode}`;
 }
 
@@ -152,9 +145,7 @@ function loseLife() {
   }
 }
 
-function die() {
-
-}
+function die() {}
 
 function printLives() {
   fill('#333');
@@ -169,14 +160,14 @@ function initNonogram() {
       const xPosition = size * x + horizontalPadding;
       const yPosition = size * y + verticalPadding;
 
-      const filled = random([true, false]);
+      const filled = random([ true, false ]);
 
       ret.push({
         xPosition,
         yPosition,
         filled,
-        clicked: false,
-        color: getCellColor(filled, false),
+        clicked : false,
+        color : getCellColor(filled, false),
       });
     }
   }
@@ -188,19 +179,19 @@ function getCellColor(filled, clicked) {
   return clicked ? filled ? '#498467' : '#C17C74' : '#F2F2F2'
 }
 
-function drawNonogram() {
-  array.forEach(drawCell);
-}
+function drawNonogram() { array.forEach(drawCell); }
 
 function drawCell(cell) {
   fill(cell.color);
-  //stroke(cell.filled && cell.clicked ? cell.color : '#777');
+  // stroke(cell.filled && cell.clicked ? cell.color : '#777');
   stroke('#fff');
   rect(cell.xPosition, cell.yPosition, size, size);
 }
 
 function findCell(x, y) {
-  return array.find(cell => (cell.xPosition <= x && cell.xPosition + size > x) && (cell.yPosition <= y && cell.yPosition + size > y));
+  return array.find(cell =>
+                        (cell.xPosition <= x && cell.xPosition + size > x) &&
+                        (cell.yPosition <= y && cell.yPosition + size > y));
 }
 
 function findGroups(cells) {
@@ -209,19 +200,20 @@ function findGroups(cells) {
   cells.reduce((prevCell, thisCell) => {
     if (thisCell.filled) {
       if (!group) {
-        group = [thisCell];
+        group = [ thisCell ];
       } else if (prevCell.filled) {
         group.push(thisCell);
       } else {
         groups.push(group);
-        group = [thisCell];
+        group = [ thisCell ];
       }
     }
 
     return thisCell;
   }, {});
 
-  if (group) groups.push(group);
+  if (group)
+    groups.push(group);
 
   return groups;
 }
