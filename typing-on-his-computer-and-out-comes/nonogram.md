@@ -1,7 +1,7 @@
 ---
 layout: layouts/p5.njk
 title: Nonogram
-programName: nonogram
+sketchId: QvvIFN5_W
 tags:
  - creations
 ---

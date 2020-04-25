@@ -3,9 +3,14 @@ layout: layouts/base.njk
 templateClass: tmpl-p5
 ---
 
+<link rel="stylesheet" href="{{ '/css/p5.min.css' | url }}" />
+{% if sketchId %}
+<iframe class="p5-embed" src="{{ 'https://editor.p5js.org/boyum/embed/' + sketchId }}"></iframe>
+{% endif %}
+{% if programName %}
 <div id="canvas-container"></div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.dom.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.sound.min.js"></script>
 <script src="{{'/js/' + programName + '.js' | url }}"></script> 
+{% endif %}

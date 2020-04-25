@@ -1,0 +1,7 @@
+---
+permalink: css/p5.min.css
+---
+{% set css %}
+  {% include "css/p5.css" %}
+{% endset %}
+{{ css | minifyCSS | safe }}

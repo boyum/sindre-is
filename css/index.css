@@ -232,7 +232,3 @@ a[href].direct-link:focus:visited,
 code {
   background-color: var(--code-background-color);
 }
-
-#canvas-container {
-  position: relative;
-}
