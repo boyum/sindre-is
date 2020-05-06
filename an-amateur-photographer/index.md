@@ -5,7 +5,7 @@ tags:
   - nav
 navtitle: Photography
 images:
-  - alt: Snowdrift in Finse, Norway
+  - alt: Snowdrift in **Finse, Norway**
     imageUrl: /img/photo-1577811037855-935237616bac.jpeg
     unsplashUrl: https://unsplash.com/photos/P7NbUe8koxM
   - alt: Jellyfish in Kyoto, Japan
