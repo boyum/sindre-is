@@ -25,4 +25,6 @@ images:
     unsplashUrl: https://unsplash.com/photos/6O0dz487O8w
 ---
 
-In my spare time I like taking photos of the world around me. These are some of the pictures I'm most proud of. Check out my [Unsplash](https://unsplash.com/@sindreboyum) for more 📸
+In my spare time I like taking photos of the world around me. These are some of
+the pictures I'm most proud of. Check out my
+[Unsplash](https://unsplash.com/@sindreboyum) for more 📸
