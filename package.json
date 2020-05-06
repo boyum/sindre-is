@@ -34,10 +34,10 @@
     "@percy/agent": "^0.21.0",
     "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
-    "luxon": "^1.23.0",
+    "luxon": "^1.24.1",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.2.7",
-    "stylelint": "^13.3.2",
+    "stylelint": "^13.3.3",
     "stylelint-config-standard": "^19.0.0",
     "stylelint-order": "^4.0.0"
   },
