@@ -37,6 +37,18 @@ p,
   line-height: 1.45;
 }
 
+.post-cover-image {
+  margin-top: 1rem;
+}
+
+.post-cover-image img {
+  display: block;
+  max-height: 40vh;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+}
+
 a[href] {
   color: inherit;
   text-decoration-color: var(--primary-color);
