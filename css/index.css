@@ -177,7 +177,7 @@ code {
 .post-tags .tag,
 .postlist .tag {
   border: 0.0625rem solid var(--primary-color);
-  border-radius: 0.5rem;
+  border-radius: 1000rem;
   color: var(--text-color);
   display: inline-block;
   font-size: 0.875em;
