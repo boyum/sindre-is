@@ -3,6 +3,13 @@ layout: layouts/base.njk
 templateClass: tmpl-post
 ---
 <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.min.css' | url }}">
+
+{% if cover_image %}
+<div class="post-cover-image">
+  <img alt="" src="{{ cover_image | url }}" />
+</div>
+{% endif %}
+
 <h1 class="post-title">{{ title }}</h1>
 <div class="post-meta">
   <div class="post-tags">
