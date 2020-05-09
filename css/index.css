@@ -247,6 +247,11 @@ a[href].tag:visited {
   color: var(--text-color);
 }
 
+a[href].tag:hover,
+a[href].tag:focus {
+  color: white;
+}
+
 .warning {
   background-color: #ffc;
   padding: 1em 0.625em;
