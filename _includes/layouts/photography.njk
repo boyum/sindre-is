@@ -11,7 +11,7 @@ templateClass: tmpl-photography
   {%- for image in images -%}
   <a href="{{image.unsplashUrl}}" class="image-container">
     <img class="image" src="{{image.imageUrl}}" alt="{{image.alt}}" width="504" height="377" onload="this.style.opacity=1" />
-    <div class="image-description" aria-hidden="true">{{image.alt | markdown | safe }}</div>
+    <div class="image-description" aria-hidden="true">{{image.alt}}</div>
   </a>
   {%- endfor -%}
 </div>
