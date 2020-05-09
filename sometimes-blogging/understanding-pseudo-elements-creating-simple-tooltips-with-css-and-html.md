@@ -5,6 +5,7 @@ description:
 tags: 
   - CSS
   - HTML
+cover_image: https://images.unsplash.com/photo-1523540939399-141cbff6a8d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80
 series: Understanding pseudo elements
 layout: layouts/post.njk
 ---

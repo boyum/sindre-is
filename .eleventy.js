@@ -8,6 +8,14 @@ const Terser = require("terser");
 const CleanCSS = require("clean-css");
 // const pluginPWA = require('eleventy-plugin-pwa');
 const htmlmin = require("html-minifier");
+const MarkdownIt = require("markdown-it");
+
+let mdOptions = {
+  html: true,
+  breaks: true,
+  linkify: true
+};
+const mdRenderer = MarkdownIt(mdOptions);
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -66,6 +74,10 @@ module.exports = function(eleventyConfig) {
 
     return minified.code;
   });
+  
+  eleventyConfig.addFilter("markdown", function (content) {
+    return mdRenderer.render(content);
+  });
 
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if (outputPath.endsWith(".html")) {
@@ -110,22 +122,19 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("favicon.ico");
 
   /* Markdown Plugins */
-  let markdownIt = require("markdown-it");
   let markdownItAnchor = require("markdown-it-anchor");
-  let options = {
-    html: true,
-    breaks: true,
-    linkify: true
-  };
+
   let opts = {
     permalink: true,
     permalinkClass: "direct-link",
     permalinkSymbol: "#"
   };
 
-  eleventyConfig.setLibrary("md", markdownIt(options)
+  eleventyConfig.setLibrary("md", mdRenderer
     .use(markdownItAnchor, opts)
   );
+
+  eleventyConfig.addWatchTarget("./**/*.(js|css)");
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
