@@ -27,7 +27,7 @@ By using the `content` property together with the `attr()` CSS function, we can 
 }
 ```
 
-This code will yield the following result: 
+This code will yield the following result:
 ![The link is rendered out with the url in parantheses showing after the link text](https://thepracticaldev.s3.amazonaws.com/i/lz5xppyhg3j7gmm6y3dm.png)
 
 Granted printed documents have become rare, this is still a neat trick for those of us working with article heavy sites!

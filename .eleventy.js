@@ -115,6 +115,15 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addShortcode("codepen", function(url) {
+    const id = url.split('/')[url.split('/').length - 1];
+    const penUrl = url.includes('embed') ? url : url.replace(id, `embed/${id}`);
+
+    return `
+<iframe height="600" src="${penUrl}?height=600&amp;default-tab=result&amp;embed-version=2" scrolling="no" frameborder="no" allowtransparency="true" style="width: 100%;">
+</iframe>`;
+  });
+
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
   eleventyConfig.addPassthroughCopy("img");
