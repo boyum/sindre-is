@@ -11,6 +11,8 @@
     <meta name="theme-color" content="#009688" />
     <link rel="icon" href="/img/sb-144.png">
 
+    <meta property="og:image" content="{{ og_image or cover_image or '/img/default-og-image.jpg' }}" />
+
     <style>
     {% set criticalCSS %}
       {% include 'critical.css' %}
