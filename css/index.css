@@ -182,10 +182,7 @@ code {
   display: inline-block;
   font-size: 0.875em;
   margin-left: 0.1em;
-  margin-top: 0.25em;
-  min-width: 3rem;
-  padding: 0.25em 0.75em;
-  text-align: center;
+  padding: 0.125em 0.5em;
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
