@@ -23,9 +23,9 @@ templateClass: tmpl-post
 <p><a href="{{ '/' | url }}">← Home</a></p>
 
 <script>
+  if (navigator.share) {
     const button = document.querySelector('.post-share-button');
     button.removeAttribute('hidden');
-  if (navigator.share) {
     
     button.addEventListener('click', async () => {
       const title = 'An article by Sindre Bøyum';
