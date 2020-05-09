@@ -4,13 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>{{ renderData.title or title or metadata.title }}</title>
-    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+    <meta name="description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/index.min.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#009688" />
     <link rel="icon" href="/img/sb-144.png">
 
+    <meta property="og:image" content="{{ og_image or cover_image or '/img/default-og-image.jpg' }}" />
+    <meta property="og:image:width" content="{{ og_image_width or cover_image_width or 1260 }}" />
+    <meta property="og:image:height" content="{{ og_image_height or cover_image_height or 630 }}" />
+    {# <meta property="og:url" content="" /> #}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ renderData.title or title or metadata.title }}" />
+    <meta property="og:description" content="{{ renderData.description or description or metadata.description }}" />
+    
+  
     <style>
     {% set criticalCSS %}
       {% include 'critical.css' %}
@@ -62,7 +71,7 @@
       </div>
     </footer>
 
-    <div class="splash-screen">
+    <div class="splash-screen" aria-hidden="true">
       <svg xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" viewbox="0 0 100 100">
         <style>.splash-signature-path{animation:draw-signature 4s 0.5s linear forwards;fill:transparent;stroke:currentColor;stroke-dasharray:1000;stroke-dashoffset:1000}.splash-signature-path--2{animation-delay:1.25s}@keyframes draw-signature{to{stroke-dashoffset:0}}</style>
@@ -70,7 +79,7 @@
         <path class="splash-signature-path splash-signature-path--2" d="M 54 50 L 54 82.333" />
       </svg>
     </div>
-    
+
     <script>var n=navigator;if('serviceWorker'in n){n.serviceWorker.register('/service-worker.js').then(()=>{},e=>console.error('Couldn\'t register service worker',e))}</script>
   </body>
 </html>
