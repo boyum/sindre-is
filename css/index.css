@@ -242,9 +242,18 @@ code {
   color: red;
 } */
 
+.post-share-button[hidden] {
+  display: none;
+}
+
 a[href].tag,
 a[href].tag:visited {
   color: var(--text-color);
+}
+
+a[href].tag:hover,
+a[href].tag:focus {
+  color: white;
 }
 
 .warning {
