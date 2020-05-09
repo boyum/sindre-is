@@ -30,7 +30,7 @@ templateClass: tmpl-post
     button.addEventListener('click', async () => {
       const title = 'An article by Sindre Bøyum';
       const text = '{{ title}}';
-      const url = location.href + (location.href.includes('?') ? '&' : '?') + 'shared=' + Date.now();
+      const url = location.href;
       
       try {
         await navigator.share({
