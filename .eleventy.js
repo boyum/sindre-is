@@ -116,7 +116,6 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addShortcode("codepen", function(url) {
-    const id = url.split('/')[url.split('/').length - 1];
     const penUrl = url.includes('embed') ? url : url.replace(/(full|details|pen)/, 'embed');
     const html = string.raw;
 
