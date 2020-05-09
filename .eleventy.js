@@ -127,7 +127,7 @@ module.exports = function(eleventyConfig) {
     .use(markdownItAnchor, opts)
   );
 
-  eleventyConfig.addWatchTarget("./**/*.(js|css)")
+  eleventyConfig.addWatchTarget("./**/*.(js|css)");
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
