@@ -7,6 +7,7 @@ tags:
   - HTML
 series: Understanding pseudo elements
 layout: layouts/post.njk
+date: 2019-07-02
 ---
 
 Have you ever tried reading a printed out website, then instantly becoming frustrated when you're trying to click the links? Pseudo elements can't really help you much with this, however they might help you a bit by displaying the links' urls! How do you do this, you ask? Let me show you the power of pseudo elements and the `attr()` function.

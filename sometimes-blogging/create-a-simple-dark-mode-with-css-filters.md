@@ -6,6 +6,7 @@ tags:
   - CSS
   - HTML
 layout: layouts/post.njk
+date: 2019-07-10
 ---
 
 So there's this thing you probably haven't heard of called "dark mode". Yeah, you're right, they're everywhere. Let me teach you how to grace the interwebs with even more instances of light on dark! 🌓
