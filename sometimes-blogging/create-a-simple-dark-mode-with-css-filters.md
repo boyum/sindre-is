@@ -27,15 +27,15 @@ Another filter function is the ✨`invert()`✨ function. It takes a percentage 
 
 _[The filter function] inverts the samples in the input image. The value of amount defines the proportion of the conversion. A value of 100% is completely inverted. A value of 0% leaves the input unchanged. Values between 0% and 100% are linear multipliers on the effect. The lacuna value for interpolation is 0._
 
-This sounds perfect for creating a simple dark mode! After all, black inverted is white (and vice versa), right? Sure! Let's try just inverting the entire page and  see how that looks:
+This sounds perfect for creating a simple dark mode! After all, black inverted is white (and vice versa), right? Sure! Let's try inverting the entire page and  see how that looks:
 
 {% codepen 'https://codepen.io/sindre/QXzPdj' %}
 
-It looks kind of ok already! Apart from the inverted image, the page looks alright. How could we stop the image from inverting? We might be able to do some magic trick by moving the images out of the container, then position them correctly with absolute positioning, however that sounds terrible for ux, dx and a11y, and possibly more abbreviations, so we need to find another way. We could also invert only parts of the page, let's say every `<p>`, `<hx>`, `<strong>`, `<ul>` and so on, however this might create new problems when trying to invert the background as there might be margins between the elements.
+It looks kind of ok already! Apart from the inverted image, the page looks alright. How could we stop the image from inverting? We might be able to do some magic trick by moving the images out of the container, then position them correctly with absolute positioning, but that sounds terrible for ux, dx and a11y, and possibly more abbreviations, so we need to find another way. We could also invert only parts of the page, let's say every `<p>`, `<hx>`, `<strong>`, `<ul>` and so on, but this might create new problems when trying to invert the background as there might be margins between the elements.
 
 ## The solution
 
-But wait! The invert of white is black and the invert of black is white... Could this mean that any color inverted an even number of times is just the same color? Of course that's the case! Let's just invert all images back to their original form when inverting the wrapper!
+But wait! The invert of white is black and the invert of black is white... Could this mean that any color inverted an even number of times is the same color? Yes! Let's invert all images back to their original form when inverting the wrapper!
 
 {% codepen 'https://codepen.io/sindre/WqJxGZ' %}
 

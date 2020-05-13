@@ -9,7 +9,7 @@ layout: layouts/post.njk
 date: 2019-09-25
 ---
 
-Ever tried using `window.confirm()` before? It's a remarkable method that is very handy whenever you want your users to *really* be sure of what they're doing. However, have you tried styling it? Just like with `window.alert()` it's impossible, so we'll need to create our own Confirm Modal. I'll show you how!
+Ever tried using `window.confirm()` before? It's a remarkable method that is very handy whenever you want your users to *really* be sure of what they're doing. But have you tried styling it? As with `window.alert()` it's impossible, so we'll need to create our own Confirm Modal. I'll show you how!
 
 ## What to solve
 
@@ -19,20 +19,20 @@ First, it's useful to map out what we're trying to solve. It's important that ou
 - Let the user say 'Yes'
 - Let the user say 'No'
 
-Also, for developers, `window.confirm()` is *so* easy to use. We don't want to make it much harder for the developers using our custom confirm than it is to do `const theyAreSure = window.confirm('Are you sure');`.
+Also, for developers, `window.confirm()` is *so* comfortable to use. We don't want to make it much harder for the developers using our custom confirm than it is to do `const theyAreSure = window.confirm('Are you sure');`.
 
 Another thing the native modal comes with is the modal itself. We don't want the devs using our component to create a lot of markup every time they need to ask their users to confirm something, which means our custom modal needs to produce this markup automatically.
 
 Ultimately, it should
 
-- Be easy to use
+- Be simple to use
 - Not run any code before the user says 'yes'
 
 ## How to solve it
 
 ### Markup
 
-For the sake of this tutorial, it's not too important to specify a convoluted markup, so let's just use this simple code as our HTML base:
+For the sake of this tutorial, it's not too important to specify a convoluted markup, so let's use this simple code as our HTML base:
 
 ```html
 <dialog class="confirm-dialog">
@@ -59,7 +59,7 @@ function createDialog() {
 
 ### JavaScript API
 
-By making use of the [Promise API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) together with [`async`/`await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function), we can solve two of the things we listed earlier: We can make the code easy to use and we can wait for a signal for when (or if) to actually run the code that deletes every user in the db.
+By making use of the [Promise API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) together with [`async`/`await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function), we can solve two of the things we listed earlier: We can make the code simple to use and we can wait for a signal for when (or if) to actually run the code that deletes every user in the db.
 
 Ultimately, we would want the use of our component to look something like this:
 
@@ -76,7 +76,7 @@ async function deleteUsers() {
 }
 ```
 
-This makes for a easy to use component, but would this work?
+This makes for a simple to use component, but would this work?
 
 JavaScript's `await`   stops code execution until the Promise that it's waiting for has been either **resolved** or **rejected**. The Promise can be resolved by  a function triggered by an Event and this is how we'll structure our code. When creating a new Promise, we will add an event listener to the two buttons and, depending on which of the buttons is clicked, resolve the Promise to either `true` or `false` - whether or not the user confirms.
 

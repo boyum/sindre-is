@@ -22,7 +22,7 @@ Before we begin, we need to understand what problems tooltips solve. They help c
 - Those using a mouse
 - Those who prefer navigating the web with only a keyboard
 
-Descriptive text can be added through the use of `aria-*` attributes, such as `aria-label` and `aria-description`, and the keyboard users need the element to be focusable. This pretty much sorts itself out, as any element with a tooltip probably is some kind of a focusable element already (`a`, `button`, `input`, `textarea`), however should you need to add a tooltip to a `div`, please think twice to help those of us who won't be able to see that information.
+Descriptive text can be added through the use of `aria-*` attributes, such as `aria-label` and `aria-description`, and the keyboard users need the element to be focusable. This pretty much sorts itself out, as any element with a tooltip probably is some kind of a focusable element already (`a`, `button`, `input`, `textarea`), though should you need to add a tooltip to a `div`, please think twice to help those of us who won't be able to see that information.
 
 We also need to add some kind of hover effect for those of us using a mouse pointer. Is there a way to neatly combine all these things such that our tooltips make a great developer experience as well? Let's write some code!
 
