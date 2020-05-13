@@ -2,7 +2,7 @@ name: Audit live site
 on: push
 
 jobs:
-  audit:
+  lighthouse-audit:
     runs-on: ubuntu-latest
     steps:
     - name: Audit live URL
@@ -11,13 +11,13 @@ jobs:
       with:
         now_site: sindre-is
         now_username: boyum
-    - name: Create comment
-      uses: peter-evans/create-or-update-comment@v1
-      id: couc
-      with:
-        issue-number: 1
-        body: |
-          My comment
-    - name: Check outputs
-      run: |
-        echo "Comment ID - ${{ steps.lighthouse_audit.outputs }}"
+  webPageTestActions:
+    name: WebPageTestActions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: boyum/webPagetestAction@feature/test-url-format
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NOW_SITE: sindre-is
+          NOW_USERNAME: boyum
+          WEBPAGETEST_API_KEY: ${{ secrets.WEBPAGETEST_API_KEY }}
