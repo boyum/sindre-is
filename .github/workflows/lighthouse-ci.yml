@@ -9,6 +9,7 @@ jobs:
       uses: boyum/lighthouse-action@master
       with:
         now_site: sindre-is
+        now_username: boyum
     - name: Upload results as an artifact
       uses: actions/upload-artifact@master
       with:
