@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Audit live URL
-      uses: jakejarvis/lighthouse-action@master
+      uses: boyum/lighthouse-action@master
       with:
         url: 'https://sindre.is/'
     - name: Upload results as an artifact
