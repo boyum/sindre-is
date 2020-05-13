@@ -7,9 +7,17 @@ jobs:
     steps:
     - name: Audit live URL
       uses: boyum/lighthouse-action@master
+      id: lighthouse_audit
       with:
         now_site: sindre-is
         now_username: boyum
-    - uses: harupy/comment-on-pr@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create comment
+      uses: peter-evans/create-or-update-comment@v1
+      id: couc
+      with:
+        issue-number: 1
+        body: |
+          My comment
+    - name: Check outputs
+      run: |
+        echo "Comment ID - ${{ steps.lighthouse_audit.outputs }}"
