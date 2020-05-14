@@ -15,7 +15,7 @@ jobs:
     name: WebPageTestActions
     runs-on: ubuntu-latest
     steps:
-      - uses: boyum/webPagetestAction@bugfix/check-for-missing-env
+      - uses: JCofman/webPagetestAction@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NOW_SITE: sindre-is
