@@ -15,9 +15,10 @@ jobs:
     name: WebPageTestActions
     runs-on: ubuntu-latest
     steps:
-      - uses: boyum/webPagetestAction@feature/test-url-format
+      - uses: boyum/webPagetestAction@bugfix/check-for-missing-env
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NOW_SITE: sindre-is
           NOW_USERNAME: boyum
           WEBPAGETEST_API_KEY: ${{ secrets.WEBPAGETEST_API_KEY }}
+          TEST_URL: https://sindre.is
