@@ -11,14 +11,20 @@ jobs:
       with:
         now_site: sindre-is
         now_username: boyum
-  webPageTestActions:
-    name: WebPageTestActions
-    runs-on: ubuntu-latest
-    steps:
-      - uses: JCofman/webPagetestAction@1.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NOW_SITE: sindre-is
-          NOW_USERNAME: boyum
-          WEBPAGETEST_API_KEY: ${{ secrets.WEBPAGETEST_API_KEY }}
-          TEST_URL: https://sindre.is
+    - name: PR Comment
+      uses: github-actions-up-and-running/pr-comment@v1.0.1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        message: Sup
+
+  # webPageTestActions:
+  #   name: WebPageTestActions
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: JCofman/webPagetestAction@1.0.0
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         NOW_SITE: sindre-is
+  #         NOW_USERNAME: boyum
+  #         WEBPAGETEST_API_KEY: ${{ secrets.WEBPAGETEST_API_KEY }}
+  #         TEST_URL: https://sindre.is
