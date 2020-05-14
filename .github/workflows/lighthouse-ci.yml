@@ -15,7 +15,7 @@ jobs:
     name: WebPageTestActions
     runs-on: ubuntu-latest
     steps:
-      - uses: JCofman/webPagetestAction@latest
+      - uses: JCofman/webPagetestAction@v0.0.5-alpha
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NOW_SITE: sindre-is
