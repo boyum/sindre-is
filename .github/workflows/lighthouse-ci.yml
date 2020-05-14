@@ -17,7 +17,7 @@ jobs:
       with:
         type: create
         body: test
-        comment_id: "1"
+        comment_id: "1000"
         token: ${{ secrets.GITHUB_TOKEN }}
 
   # webPageTestActions:
