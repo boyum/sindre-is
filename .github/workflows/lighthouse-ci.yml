@@ -11,14 +11,16 @@ jobs:
       with:
         now_site: sindre-is
         now_username: boyum
-    - name: Create comment
-      uses: jungwinter/comment@v1
-      id: create
+    - name: Create commit comment
+      uses: peter-evans/commit-comment@v1
       with:
-        type: create
-        body: test
-        comment_id: "1000"
-        token: ${{ secrets.GITHUB_TOKEN }}
+        body: |
+          This is a multi-line test comment
+          - With GitHub **Markdown**
+          - Created by [commit-comment][1]
+
+          [1]: https://github.com/peter-evans/commit-comment
+          ${{ steps.lighthouse_audit.outputs }}
 
   # webPageTestActions:
   #   name: WebPageTestActions
