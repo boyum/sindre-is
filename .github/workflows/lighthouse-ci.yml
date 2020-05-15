@@ -20,7 +20,7 @@ jobs:
           - Created by [commit-comment][1]
 
           [1]: https://github.com/peter-evans/commit-comment
-          ${{ steps.lighthouse_audit.outputs }}
+          ${{ steps.lighthouse_audit.outputs[0] }}
 
   # webPageTestActions:
   #   name: WebPageTestActions
