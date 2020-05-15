@@ -11,16 +11,16 @@ jobs:
       with:
         now_site: sindre-is
         now_username: boyum
+    - name: Upload results as an artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: report
+        path: './report'
     - name: Create commit comment
       uses: peter-evans/commit-comment@v1
       with:
         body: |
-          This is a multi-line test comment
-          - With GitHub **Markdown**
-          - Created by [commit-comment][1]
-
-          [1]: https://github.com/peter-evans/commit-comment
-          ${{ steps.lighthouse_audit.outputs[0] }}
+          ${{ steps.lighthouse_audit.output.result }}
 
   # webPageTestActions:
   #   name: WebPageTestActions
