@@ -130,6 +130,18 @@ module.exports = function(eleventyConfig) {
 ></iframe>`;
   });
 
+  eleventyConfig.addShortcode("image", function(src, altText = '') {
+    const html = String.raw;
+    
+    return html`
+<img
+  class="article-image"
+  src="${src}"
+  alt="${altText}"
+/>
+    `;
+  });
+
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
   eleventyConfig.addPassthroughCopy("img");
