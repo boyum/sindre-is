@@ -66,4 +66,4 @@ Ok, now we have a default styled button and some text that pops out whenever we 
 
 Check out the final result on CodePen:
 
-{% codepen 'https://codepen.io/sindre/XLELQr' %}
+{% codepen 'https://codepen.io/sindre/pen/XLELQr' %}
