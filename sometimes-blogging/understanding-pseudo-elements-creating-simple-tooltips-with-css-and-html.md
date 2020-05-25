@@ -8,8 +8,8 @@ tags:
 cover_image: https://images.unsplash.com/photo-1523540939399-141cbff6a8d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80
 series: Understanding pseudo elements
 layout: layouts/post.njk
+date: 2019-07-02
 ---
-
 
 Tooltips are a nice way to show the user extra info about the site's UI. By making use of CSS attribute selectors and the `attr()` function, we're able to create a neat little tooltip to show our users extra info that we don't want to add to the element's text. Scroll down to the bottom to see the tooltips in action, or follow along to learn how to make them yourself!
 
@@ -22,7 +22,7 @@ Before we begin, we need to understand what problems tooltips solve. They help c
 - Those using a mouse
 - Those who prefer navigating the web with only a keyboard
 
-Descriptive text can be added through the use of `aria-*` attributes, such as `aria-label` and `aria-description`, and the keyboard users need the element to be focusable. This pretty much sorts itself out, as any element with a tooltip probably is some kind of a focusable element already (`a`, `button`, `input`, `textarea`), however should you need to add a tooltip to a `div`, please think twice to help those of us who won't be able to see that information. 
+Descriptive text can be added through the use of `aria-*` attributes, such as `aria-label` and `aria-description`, and the keyboard users need the element to be focusable. This pretty much sorts itself out, as any element with a tooltip probably is some kind of a focusable element already (`a`, `button`, `input`, `textarea`), however should you need to add a tooltip to a `div`, please think twice to help those of us who won't be able to see that information.
 
 We also need to add some kind of hover effect for those of us using a mouse pointer. Is there a way to neatly combine all these things such that our tooltips make a great developer experience as well? Let's write some code!
 
@@ -40,7 +40,7 @@ Let's start with a simple button:
 </button>
 ```
 
-The `aria-description` attribute makes screen readers read both the text inside the `button` element, as well as the description text. We'll use the `data-tooltip` to tell the browser that this element should have a tooltip. 
+The `aria-description` attribute makes screen readers read both the text inside the `button` element, as well as the description text. We'll use the `data-tooltip` to tell the browser that this element should have a tooltip.
 
 ## Step 2: Creating a tooltip in CSS
 
@@ -66,5 +66,4 @@ Ok, now we have a default styled button and some text that pops out whenever we 
 
 Check out the final result on CodePen:
 
-<iframe height="600" src="https://codepen.io/sindre/embed/XLELQr?height=600&amp;default-tab=result&amp;embed-version=2" scrolling="no" frameborder="no" allowtransparency="true" style="width: 100%;">
-</iframe>
+{% codepen 'https://codepen.io/sindre/pen/XLELQr' %}

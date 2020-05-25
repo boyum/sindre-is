@@ -7,6 +7,7 @@ tags:
   - HTML
 series: Advanced CSS
 layout: layouts/post.njk
+date: 2019-07-12
 ---
 
 Styling for every possibility is hard. Doing the CSS work for a ✨CMS generated site✨ where you have no control of the site's markup teaches you quite a few things about making the most out of the limited tools we're blessed with.
@@ -55,7 +56,7 @@ li {
   flex-grow: 1;
   flex-shrink: 0;
   margin: var(--margin);
-  min-width: 290px;
+  min-width: 18.25rem;
 }
 
 li:nth-last-child(4n):first-child ~ li,
@@ -63,7 +64,7 @@ li:nth-last-child(4n):first-child,
 li:nth-last-child(7n):not(:nth-last-child(14n)):first-child ~ li,
 li:nth-last-child(7n):not(:nth-last-child(14n)):first-child {
   flex-basis: calc(25% - (2 * var(--margin)));
-}  
+}
 ```
 
 This method uses [Heydon Pickering's ingenious Albatross strategy (must-read)](http://www.heydonworks.com/article/the-flexbox-holy-albatross). The only caveat here is the `min-width: 290px`. We need to set a minimum width, and this minimum width will make things go sideways on screens narrower than it. Be sure to keep it low!
@@ -76,11 +77,4 @@ See that the `flex-basis` changes whenever there's a multiple of four or seven `
 
 After a little cleanup, here's the final result! ([Go to fullscreen version](https://codepen.io/sindre/full/vqWZrz))
 
-<iframe
-  height="600"
-  src="https://codepen.io/sindre/embed/vqWZrz?height=600&amp;default-tab=result&amp;embed-version=2"
-  scrolling="no"
-  frameborder="no"
-  allowtransparency="true"
-  style="width: 100%;"
-  title="Code from CodePen that shows the final result"></iframe>
+{% codepen 'https://codepen.io/sindre/vqWZrz' %}

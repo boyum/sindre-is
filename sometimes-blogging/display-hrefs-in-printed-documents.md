@@ -7,6 +7,7 @@ tags:
   - HTML
 series: Understanding pseudo elements
 layout: layouts/post.njk
+date: 2019-07-02
 ---
 
 Have you ever tried reading a printed out website, then instantly becoming frustrated when you're trying to click the links? Pseudo elements can't really help you much with this, however they might help you a bit by displaying the links' urls! How do you do this, you ask? Let me show you the power of pseudo elements and the `attr()` function.
@@ -27,7 +28,7 @@ By using the `content` property together with the `attr()` CSS function, we can 
 }
 ```
 
-This code will yield the following result: 
+This code will yield the following result:
 ![The link is rendered out with the url in parantheses showing after the link text](https://thepracticaldev.s3.amazonaws.com/i/lz5xppyhg3j7gmm6y3dm.png)
 
 Granted printed documents have become rare, this is still a neat trick for those of us working with article heavy sites!
