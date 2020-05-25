@@ -7,6 +7,7 @@ tags:
   - HTML
 series: Advanced CSS
 layout: layouts/post.njk
+date: 2019-07-12
 ---
 
 Styling for every possibility is hard. Doing the CSS work for a ✨CMS generated site✨ where you have no control of the site's markup teaches you quite a few things about making the most out of the limited tools we're blessed with.
