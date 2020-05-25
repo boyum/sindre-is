@@ -26,12 +26,6 @@
     {% endset %}
     {{ criticalCSS | minifyCSS | safe }}
     </style>
-    <script>
-    {% set splashScreenJS %}
-      {% include 'show-splash-screen.js' %}
-    {% endset %}
-    {{ splashScreenJS | minifyJS | safe }}
-    </script>
   </head>
   <body>
     <header>
