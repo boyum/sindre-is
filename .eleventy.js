@@ -9,6 +9,7 @@ const CleanCSS = require("clean-css");
 const pluginPWA = require('eleventy-plugin-pwa');
 const htmlmin = require("html-minifier");
 const MarkdownIt = require("markdown-it");
+const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 
 let mdOptions = {
   html: true,
@@ -20,7 +21,7 @@ const mdRenderer = MarkdownIt(mdOptions);
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
-
+  eleventyConfig.addPlugin(inclusiveLangPlugin);
   eleventyConfig.addPlugin(pluginPWA, {
     clientsClaim: true,
     skipWaiting: true,

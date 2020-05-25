@@ -22,7 +22,7 @@ Create a grid of rectangles such that it behaves like this on desktop screens:
 
 Use no JS to achieve this, make it work on IE 10 and up, and use no media queries as we want this to be fluid and work on any screen.
 
-At first sight this might seem like a trivial problem to solve. A few flex-properties should solve most of this, but there's a problem here: If there are four items, they should all render on the same row, however if the user adds one more, the first three items should display on one row, then the next two should be rendered on their own row. How can this possibly be done with no JS?
+At first sight this might seem like a trivial problem to solve. A few flex-properties should solve most of this, but there's a problem here: If there are four items, they should all render on the same row, but if the user adds one more, the first three items should display on one row, then the next two should be rendered on their own row. How can this possibly be done with no JS?
 
 ## CSS quantity queries to the rescue
 

@@ -10,11 +10,11 @@ layout: layouts/post.njk
 date: 2019-07-02
 ---
 
-Have you ever tried reading a printed out website, then instantly becoming frustrated when you're trying to click the links? Pseudo elements can't really help you much with this, however they might help you a bit by displaying the links' urls! How do you do this, you ask? Let me show you the power of pseudo elements and the `attr()` function.
+Have you ever tried reading a printed out website, then instantly becoming frustrated when you're trying to click the links? Pseudo elements can't really help you much with this, but they might help you a bit by displaying the links' urls! How do you do this, you ask? Let me show you the power of pseudo elements and the `attr()` function.
 
 Printed documents only have two dimensions, and they aren't even clickable?! How can we tell the user what the underlined text goes to?
 
-By using the `content` property together with the `attr()` CSS function, we can display the value of any attribute. As `href` is an attribute on `a` elements, surely we can display this too, right? Of course!s
+By using the `content` property together with the `attr()` CSS function, we can display the value of any attribute. As `href` is an attribute on `a` elements, surely we can display this too, right? That's right!
 
 ```html
 <a href="https://dev.to">a link with no clear sign of where it points to</a>
