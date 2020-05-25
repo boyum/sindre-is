@@ -13,4 +13,4 @@ module.exports = function (eleventyConfig) {
   style="width: 100%;"
 ></iframe>`;
 	});
-}
+};
