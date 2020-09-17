@@ -8,6 +8,7 @@
   --gray-800: #222;
   --gray-700: #333;
   --gray-600: #444;
+  --gray-300: #cdcdcd;
   --gray-200: #e0e0e0;
   --gray-100: #f2f2f2;
   --navy: #17050f;
@@ -18,8 +19,9 @@
   --secondary-background-color: var(--gray-200);
   --secondary-background-color--inverse: var(--gray-600);
   --text-color: var(--gray-700);
+  --secondary-text-color: var(--gray-600);
   --visited-link-color: var(--navy);
-  --code-background-color: #e0f2f1;
+  --code-background-color: #bbdefb;
   --heading-color: var(--primary-color);
 }
 
@@ -30,6 +32,7 @@
     --secondary-background-color: var(--gray-600);
     --secondary-background-color--inverse: var(--gray-200);
     --text-color: var(--gray-200);
+    --secondary-text-color: var(--gray-300);
     --visited-link-color: #fff;
     --code-background-color: var(--gray-800);
     --heading-color: var(--gray-200);

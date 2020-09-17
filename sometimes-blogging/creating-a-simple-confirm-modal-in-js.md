@@ -76,7 +76,7 @@ async function deleteUsers() {
 }
 ```
 
-This makes for a easy to use component, but would this work?
+This makes for an easy to use component, but would this work?
 
 JavaScript's `await`   stops code execution until the Promise that it's waiting for has been either **resolved** or **rejected**. The Promise can be resolved by  a function triggered by an Event and this is how we'll structure our code. When creating a new Promise, we will add an event listener to the two buttons and, depending on which of the buttons is clicked, resolve the Promise to either `true` or `false` - whether or not the user confirms.
 
@@ -95,9 +95,9 @@ class ConfirmDialog {
     trueButtonText,
     falseButtonText
   }) {
-    this.questionText = questionText || 'Are you sure?';
-    this.trueButtonText = trueButtonText || 'Yes';
-    this.falseButtonText = falseButtonText || 'No';
+    this.questionText = questionText ?? 'Are you sure?';
+    this.trueButtonText = trueButtonText ?? 'Yes';
+    this.falseButtonText = falseButtonText ?? 'No';
 
     this.dialog = undefined;
     this.trueButton = undefined;
@@ -167,6 +167,7 @@ confirm() {
     }
 
     this.dialog.showModal();
+    this.trueButton.focus();
 
     this.trueButton.addEventListener("click", () => {
       resolve(true);
