@@ -4,7 +4,7 @@ module.exports = {
   ],
   extends: 'stylelint-config-standard',
   rules: {
-    'unit-whitelist': ['em', 'rem', '%', 'vh', 'vw', 's', 'deg'],
+    'unit-allowed-list': ['em', 'rem', '%', 'vh', 'vw', 's', 'deg'],
     'no-empty-source': null,
     'at-rule-no-unknown': [true, {
       'ignoreAtRules': [
