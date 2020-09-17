@@ -5,8 +5,7 @@
   "background_color": "#009688",
   "display": "standalone",
   "start_url": "/",
-  "icons": [
-    {
+  "icons": [{
       "src": "/img/sb-144.png",
       "type": "image/png",
       "sizes": "144x144"

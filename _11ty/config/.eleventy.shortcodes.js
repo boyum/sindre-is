@@ -1,9 +1,9 @@
-module.exports = function (eleventyConfig) {
-	eleventyConfig.addShortcode("codepen", function (url) {
-		const penUrl = url.includes('embed') ? url : url.replace(/(\/full\/|\/details\/|\/pen\/)/ig, '/embed/');
-		const html = String.raw;
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addShortcode("codepen", function(url) {
+    const penUrl = url.includes('embed') ? url : url.replace(/(\/full\/|\/details\/|\/pen\/)/ig, '/embed/');
+    const html = String.raw;
 
-		return html`
+    return html `
 <iframe
   allowtransparency="true"
   frameborder="no"
@@ -12,5 +12,5 @@ module.exports = function (eleventyConfig) {
   scrolling="no"
   style="width: 100%;"
 ></iframe>`;
-	});
+  });
 };
