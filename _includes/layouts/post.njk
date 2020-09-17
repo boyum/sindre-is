@@ -33,12 +33,12 @@ templateClass: tmpl-post
   if (navigator.share) {
     const button = document.querySelector('.post-share-button');
     button.removeAttribute('hidden');
-    
+
     button.addEventListener('click', async () => {
       const title = 'An article by Sindre Bøyum';
       const text = '{{ title}}';
       const url = location.href;
-      
+
       try {
         await navigator.share({
           title,

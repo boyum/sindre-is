@@ -1,3 +1,3 @@
-module.exports = function (eleventyConfig) {
-	eleventyConfig.addCollection("tagList", require("../getTagList"));
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addCollection("tagList", require("../getTagList"));
 };
