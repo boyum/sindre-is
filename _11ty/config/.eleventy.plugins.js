@@ -14,6 +14,10 @@ module.exports = function (eleventyConfig) {
 			handler: "cacheFirst",
 		},
 		{
+			urlPattern: /^.*\.(html|jpg|png|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
+			handler: `staleWhileRevalidate`
+		},
+		{
 			urlPattern: "/service-worker.js",
 			handler: "networkFirst",
 		}
