@@ -14,7 +14,7 @@ module.exports = function (eleventyConfig) {
 	initPlugins(eleventyConfig);
 	initShortcodes(eleventyConfig);
 	initTransforms(eleventyConfig);
-	
+
 	eleventyConfig.setDataDeepMerge(true);
 
 	eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
@@ -64,14 +64,14 @@ module.exports = function (eleventyConfig) {
 		// Leading or trailing slashes are all normalized away, so don’t worry about it.
 		// If you don’t have a subdirectory, use "" or "/" (they do the same thing)
 		// This is only used for URLs (it does not affect your file structure)
-		pathPrefix: "/",
+    pathPrefix: "/",
 
 		markdownTemplateEngine: "liquid",
 		htmlTemplateEngine: "njk",
 		dataTemplateEngine: "njk",
 		passthroughFileCopy: true,
 		dir: {
-			input: ".",
+			input: "src",
 			includes: "_includes",
 			data: "_data",
 			output: "_site"
