@@ -8,7 +8,7 @@
     "stylelint": "stylelint **/*.css",
     "stylelint-fix": "npm run stylelint -- --fix",
     "lint": "npm run stylelint",
-    "fix-lint": "nmp run stylelint-fix",
+    "fix-lint": "npm run stylelint-fix",
     "test": "echo 'test'",
     "travis": "npm run test",
     "percy": "npm run build && percy snapshot ./_site"
