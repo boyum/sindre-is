@@ -1,164 +1,39 @@
-const {
-  DateTime
-} = require("luxon");
 const fs = require("fs");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const Terser = require("terser");
-const CleanCSS = require("clean-css");
-const pluginPWA = require('eleventy-plugin-pwa');
-const htmlmin = require("html-minifier");
 const MarkdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
 
-let mdOptions = {
-  html: true,
-  breaks: true,
-  linkify: true
-};
-const mdRenderer = MarkdownIt(mdOptions);
+const initCollections = require('./_11ty/config/.eleventy.collections.js');
+const initFilters = require('./_11ty/config/.eleventy.filters.js');
+const initPlugins = require('./_11ty/config/.eleventy.plugins.js');
+const initShortcodes = require('./_11ty/config/.eleventy.shortcodes.js');
+const initTransforms = require('./_11ty/config/.eleventy.transforms.js');
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginSyntaxHighlight);
-
-  eleventyConfig.addPlugin(pluginPWA, {
-    clientsClaim: true,
-    skipWaiting: true,
-    runtimeCaching: [{
-        urlPattern: /\/img\/.+\.(?:png|gif|jpg|jpeg|webp|svg)$/,
-        handler: "cacheFirst",
-      },
-      {
-        urlPattern: "/service-worker.js",
-        handler: "networkFirst",
-      }
-    ],
-  });
+  initCollections(eleventyConfig);
+  initFilters(eleventyConfig);
+  initPlugins(eleventyConfig);
+  initShortcodes(eleventyConfig);
+  initTransforms(eleventyConfig);
 
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
-  eleventyConfig.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, {
-      zone: 'utc'
-    }).toFormat("dd LLL yyyy");
-  });
-
-  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, {
-      zone: 'utc'
-    }).toFormat('yyyy-LL-dd');
-  });
-
-  // Get the first `n` elements of a collection.
-  eleventyConfig.addFilter("head", (array, n) => {
-    if (n < 0) {
-      return array.slice(n);
-    }
-
-    return array.slice(0, n);
-  });
-
-  eleventyConfig.addFilter("minifyCSS", function(code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
-
-  eleventyConfig.addFilter("minifyJS", function(code) {
-    let minified = Terser.minify(code);
-    if (minified.error) {
-      console.log("Terser error: ", minified.error);
-      return code;
-    }
-
-    return minified.code;
-  });
-  
-  eleventyConfig.addFilter("markdown", function (content) {
-    return mdRenderer.render(content);
-  });
-
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if (outputPath.endsWith(".html")) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
-      return minified;
-    }
-
-    return content;
-  });
-
-  eleventyConfig.addTransform("cssmin", function(content, outputPath) {
-    if (outputPath.endsWith(".css")) {
-      return new CleanCSS({}).minify(content).styles;
-    }
-
-    return content;
-  });
-
-  eleventyConfig.addTransform("jsmin", function(content, outputPath) {
-    if (outputPath.endsWith(".js")) {
-      let minified = Terser.minify(content);
-
-      if (minified.error) {
-        console.log("Terser error: ", minified.error);
-        return content;
-      }
-
-      return minified;
-    }
-
-    return content;
-  });
-
-  eleventyConfig.addShortcode("codepen", function(url) {
-    const penUrl = url.includes('embed') ? url : url.replace(/(\/full\/|\/details\/|\/pen\/)/ig, '/embed/');
-    const html = String.raw;
-
-    return html`
-<iframe
-  allowtransparency="true"
-  frameborder="no"
-  height="600"
-  src="${penUrl}?height=600&amp;default-tab=result&amp;embed-version=2"
-  scrolling="no"
-  style="width: 100%;"
-></iframe>`;
-  });
-
-  eleventyConfig.addShortcode("image", function(src, altText = '') {
-    const html = String.raw;
-    
-    return html`
-<img
-  class="article-image"
-  src="${src}"
-  alt="${altText}"
-/>
-    `;
-  });
-
-  eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
-
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("manifest.json");
   eleventyConfig.addPassthroughCopy("favicon.ico");
 
-  /* Markdown Plugins */
-  let markdownItAnchor = require("markdown-it-anchor");
-
-  let opts = {
-    permalink: true,
-    permalinkClass: "direct-link",
-    permalinkSymbol: "#"
-  };
-
+  const mdRenderer = MarkdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  });
   eleventyConfig.setLibrary("md", mdRenderer
-    .use(markdownItAnchor, opts)
+    .use(markdownItAnchor, {
+      permalink: true,
+      permalinkClass: "direct-link",
+      permalinkSymbol: "#"
+    })
   );
 
   eleventyConfig.addWatchTarget("./**/*.(js|css)");
