@@ -1,28 +1,21 @@
-module.exports = function(collection) {
-  let tagSet = new Set();
-  collection.getAll().forEach(function(item) {
-    if ("tags" in item.data) {
-      let tags = item.data.tags;
+module.exports = (collection) => {
+  const tags =
+    collection
+        .getAll()
+        .map((item) => item.data.tags && item.data.tags.filter(isCustomTag))
+        .filter(Boolean);
 
-      tags = tags.filter(function(item) {
-        switch (item) {
-          // this list should match the `filter` list in tags.njk
-          case "all":
-          case "nav":
-          case "post":
-          case "posts":
-            return false;
-        }
-
-        return true;
-      });
-
-      for (const tag of tags) {
-        tagSet.add(tag);
-      }
-    }
-  });
-
-  // returning an array in addCollection works in Eleventy 0.5.3
-  return [...tagSet];
+  const uniqueTags = new Set(...tags);
+  return [...uniqueTags];
 };
+
+/**
+ * Returns whether or not the given tag is custom -
+ * i.e. not either "all", "nav", "post" or "posts".
+ * @param {string} tag
+ * @return {boolean}
+ */
+function isCustomTag(tag) {
+  const systemTags = ['all', 'nav', 'post', 'posts'];
+  return systemTags.includes(tag);
+}
