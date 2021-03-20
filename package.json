@@ -28,10 +28,11 @@
   },
   "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "@11ty/eleventy-plugin-rss": "^1.0.9",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
-    "@percy/agent": "^0.21.0",
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
+    "@percy/agent": "^0.28.6",
+    "clean-css": "^4.2.3",
     "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
     "luxon": "^1.25.0",
@@ -39,10 +40,7 @@
     "markdown-it-anchor": "^5.3.0",
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^19.0.0",
-    "stylelint-order": "^4.1.0"
-  },
-  "dependencies": {
-    "clean-css": "^4.2.3",
-    "terser": "^4.8.0"
+    "stylelint-order": "^4.1.0",
+    "terser": "^5.6.1"
   }
 }
