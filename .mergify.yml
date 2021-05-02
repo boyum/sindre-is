@@ -6,4 +6,4 @@ pull_request_rules:
       - title~=\(patch\)$
     actions:
       merge:
-        method: merge
+        method: squash
