@@ -2,7 +2,7 @@ pull_request_rules:
   - name: Automatic merge for depfu pull requests
     conditions:
       - author=depfu[bot]
-      - base=main # or master
+      - base=master
       - title~=\(patch\)$
     actions:
       merge:
