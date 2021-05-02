@@ -4,6 +4,7 @@ pull_request_rules:
       - author=depfu[bot]
       - base=master
       - title~=\(patch\)$
+      - action=squash
     actions:
       merge:
         method: merge
