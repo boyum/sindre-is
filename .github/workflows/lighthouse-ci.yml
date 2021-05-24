@@ -1,0 +1,35 @@
+name: Audit live site
+on: push
+
+jobs:
+  lighthouse-audit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Audit live URL
+      uses: boyum/lighthouse-action@master
+      id: lighthouse_audit
+      with:
+        now_site: sindre-is
+        now_username: boyum
+    - name: Upload results as an artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: report
+        path: './report'
+    - name: Create commit comment
+      uses: peter-evans/commit-comment@v1
+      with:
+        body: |
+          ${{ steps.lighthouse_audit.output.result }}
+
+  # webPageTestActions:
+  #   name: WebPageTestActions
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: JCofman/webPagetestAction@1.0.0
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         NOW_SITE: sindre-is
+  #         NOW_USERNAME: boyum
+  #         WEBPAGETEST_API_KEY: ${{ secrets.WEBPAGETEST_API_KEY }}
+  #         TEST_URL: https://sindre.is
