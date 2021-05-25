@@ -1,21 +1,18 @@
-module.exports = function(collection) {
-  let tagSet = new Set();
-  collection.getAll().forEach(function(item) {
-    if ("tags" in item.data) {
-      let tags = item.data.tags;
+// @ts-check
+/// <reference path="../index.d.ts" />
 
-      tags = tags.filter(function(item) {
-        switch (item) {
-          // this list should match the `filter` list in tags.njk
-          case "all":
-          case "nav":
-          case "post":
-          case "posts":
-            return false;
-        }
+/**
+ *
+ * @param {Collection} collection
+ * @returns {Array<string>}
+ */
+module.exports = function (collection) {
+  const tagSet = new Set();
 
-        return true;
-      });
+  collection.getAll().forEach((item) => {
+    if (item.data.tags) {
+      const systemTags = ["all", "nav", "post", "posts"];
+      const tags = item.data.tags.filter((tag) => !systemTags.includes(tag));
 
       for (const tag of tags) {
         tagSet.add(tag);
@@ -23,6 +20,5 @@ module.exports = function(collection) {
     }
   });
 
-  // returning an array in addCollection works in Eleventy 0.5.3
   return [...tagSet];
 };
