@@ -1,0 +1,11 @@
+{
+  "include": ["./**/*.js", ".eleventy.js"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true
+  }
+}
