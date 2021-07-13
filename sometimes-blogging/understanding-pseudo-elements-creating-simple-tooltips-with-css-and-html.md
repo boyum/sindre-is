@@ -13,6 +13,8 @@ date: 2019-07-02
 
 Tooltips are a nice way to show the user extra info about the site's UI. By making use of CSS attribute selectors and the `attr()` function, we're able to create a neat little tooltip to show our users extra info that we don't want to add to the element's text. Scroll down to the bottom to see the tooltips in action, or follow along to learn how to make them yourself!
 
+{% image 'https://images.unsplash.com/photo-1589550257241-c7a0d595f525?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3302&q=80' %}
+
 ## Preface
 
 Before we begin, we need to understand what problems tooltips solve. They help confused users understand the UI we have created. Confused users come in all different shapes and we need to help them all. This means our tooltips must work for:

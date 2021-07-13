@@ -21,4 +21,16 @@ module.exports = function (eleventyConfig) {
       style="width: 100%;"
     ></iframe>`;
   });
+  
+  eleventyConfig.addShortcode("image", function(src, altText = '') {
+    const html = String.raw;
+    
+    return html`
+<img
+  class="article-image"
+  src="${src}"
+  alt="${altText}"
+/>
+    `;
+  });
 };

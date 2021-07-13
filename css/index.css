@@ -301,3 +301,10 @@ a[href].direct-link:focus:visited,
 code {
   background-color: var(--code-background-color);
 }
+
+.article-image {
+  display: block;
+  height: min(30vh, 25rem);
+  object-fit: cover;
+  width: 100%;
+}
