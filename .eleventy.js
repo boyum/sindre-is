@@ -1,5 +1,4 @@
 // @ts-check
-/// <reference path="./index.d.ts" />
 
 const fs = require("fs");
 const MarkdownIt = require("markdown-it");
@@ -38,6 +37,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.setLibrary(
     "md",
+    // @ts-expect-error MarkdownItAnchor's type definitions are not updated
     mdRenderer.use(markdownItAnchor, {
       permalink: true,
       permalinkClass: "direct-link",
