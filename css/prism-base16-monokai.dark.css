@@ -4,13 +4,8 @@ pre[class*="language-"] {
   color: #f8f8f2;
   direction: ltr;
   font-size: 0.875rem;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  -webkit-hyphens: none;
   hyphens: none;
   line-height: 1.375;
-  -moz-tab-size: 2;
-  -o-tab-size: 2;
   tab-size: 2;
   text-align: left;
   white-space: pre;
@@ -41,7 +36,7 @@ pre[class*="language-"] {
 }
 
 .token.namespace {
-  opacity: 0.7;
+  opacity: 70%;
 }
 
 .token.operator,

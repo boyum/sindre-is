@@ -91,11 +91,11 @@ code {
 .tmpl-post pre[class*="language"] {
   border-radius: 0.5rem;
   box-shadow:
-    0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.17),
-    0 0.125rem 0.125rem rgba(0, 0, 0, 0.17),
-    0 0.25rem 0.25rem rgba(0, 0, 0, 0.17),
-    0 0.5rem 0.5rem rgba(0, 0, 0, 0.17),
-    0 1rem 1rem rgba(0, 0, 0, 0.17);
+    0 0.0625rem 0.0625rem rgb(0 0 0 / 17%),
+    0 0.125rem 0.125rem rgb(0 0 0 / 17%),
+    0 0.25rem 0.25rem rgb(0 0 0 / 17%),
+    0 0.5rem 0.5rem rgb(0 0 0 / 17%),
+    0 1rem 1rem rgb(0 0 0 / 17%);
   font-size: 0.875rem;
   margin: 0.5em 0 2em;
   padding: 1.5em 1em;
@@ -156,7 +156,7 @@ code {
 .postlist-date {
   color: var(--text-color);
   font-size: 0.8125em;
-  word-spacing: -0.03125em;
+  word-spacing: -0.0313em;
 }
 
 .archive-link {
@@ -233,7 +233,7 @@ code {
   width: 1em;
 }
 
-.post-share-button--success {
+.post-share-button-success {
   background-color: var(--primary-color);
   color: white;
 }
