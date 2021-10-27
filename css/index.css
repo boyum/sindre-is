@@ -156,7 +156,7 @@ code {
 .postlist-date {
   color: var(--text-color);
   font-size: 0.8125em;
-  word-spacing: -0.03125em;
+  word-spacing: -0.0313em;
 }
 
 .archive-link {
