@@ -14,9 +14,7 @@
   --primary-color: #2866d7;
   --sun-size: 5rem;
   --background-color: #fff;
-  --background-color--inverse: var(--gray-700);
   --secondary-background-color: var(--gray-200);
-  --secondary-background-color--inverse: var(--gray-600);
   --text-color: var(--gray-700);
   --visited-link-color: var(--navy);
   --code-background-color: #e0f2f1;
@@ -26,9 +24,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: var(--gray-700);
-    --background-color--inverse: var(--gray-100);
     --secondary-background-color: var(--gray-600);
-    --secondary-background-color--inverse: var(--gray-200);
     --text-color: var(--gray-200);
     --visited-link-color: #fff;
     --code-background-color: var(--gray-800);
@@ -91,10 +87,8 @@ body {
   min-height: 100vh;
   padding: 0;
   padding:
-    env(safe-area-inset-top, 1rem)
-    env(safe-area-inset-right, 1rem)
-    env(safe-area-inset-bottom, 1rem)
-    env(safe-area-inset-left, 1rem);
+    env(safe-area-inset-top, 1rem) env(safe-area-inset-right, 1rem)
+    env(safe-area-inset-bottom, 1rem) env(safe-area-inset-left, 1rem);
 }
 
 header {

@@ -233,7 +233,7 @@ code {
   width: 1em;
 }
 
-.post-share-button--success {
+.post-share-button-success {
   background-color: var(--primary-color);
   color: white;
 }
