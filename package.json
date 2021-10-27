@@ -42,7 +42,7 @@
     "markdown-it-anchor": "^8.4.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
-    "stylelint-order": "^4.1.0",
+    "stylelint-order": "^5.0.0",
     "typescript": "^4.4.4"
   },
   "dependencies": {
