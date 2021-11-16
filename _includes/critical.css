@@ -37,7 +37,7 @@
 }
 
 .show-splash-screen .splash-screen {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .splash-screen {
@@ -47,7 +47,7 @@
   display: flex;
   justify-content: center;
   left: 0;
-  opacity: 0%;
+  opacity: 0;
   pointer-events: none;
   position: fixed;
   right: 0;
