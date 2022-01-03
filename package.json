@@ -37,7 +37,7 @@
     "clean-css": "^5.2.2",
     "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
-    "luxon": "^2.2.0",
+    "luxon": "^2.3.0",
     "markdown-it": "^12.3.0",
     "markdown-it-anchor": "^8.4.1",
     "stylelint": "^14.2.0",
