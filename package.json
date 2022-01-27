@@ -34,7 +34,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
     "@percy/agent": "^0.28.7",
     "@types/luxon": "^2.0.9",
-    "clean-css": "^5.2.2",
+    "clean-css": "^5.2.3",
     "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
     "luxon": "^2.3.0",
