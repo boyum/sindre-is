@@ -31,7 +31,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-beta.1",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
     "@percy/agent": "^0.28.7",
     "@types/luxon": "^2.0.9",
     "clean-css": "^5.2.3",
