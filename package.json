@@ -33,7 +33,7 @@
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
     "@percy/agent": "^0.28.7",
-    "@types/luxon": "^2.0.9",
+    "@types/luxon": "^2.3.0",
     "clean-css": "^5.2.4",
     "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
