@@ -46,6 +46,6 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@11ty/eleventy-upgrade-help": "^2.0.4"
+    "@11ty/eleventy-upgrade-help": "^2.0.5"
   }
 }
