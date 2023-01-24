@@ -4,7 +4,6 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginPWA = require("eleventy-plugin-pwa");
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 
 /**
  * @param {EleventyConfig} eleventyConfig
@@ -12,7 +11,6 @@ const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
-  eleventyConfig.addPlugin(UpgradeHelper);
 
   eleventyConfig.addPlugin(pluginPWA, {
     clientsClaim: true,
