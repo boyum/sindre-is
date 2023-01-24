@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 8
+  - 18
 before_script:
   - npm install @11ty/eleventy -g
 script: npm run travis && eleventy --pathprefix="/sindre-is/"

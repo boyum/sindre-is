@@ -36,7 +36,6 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "@types/luxon": "^3.2.0",
     "clean-css": "^5.3.2",
-    "eleventy-plugin-pwa": "^1.0.8",
     "html-minifier": "^4.0.0",
     "luxon": "^3.2.1",
     "markdown-it": "^13.0.1",
