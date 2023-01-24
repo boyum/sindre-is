@@ -8,7 +8,7 @@ const CleanCSS = require("clean-css");
  * @param {EleventyConfig} eleventyConfig
  */
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
+  eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {
       zone: "utc",
     }).toFormat("dd LLL yyyy");
@@ -30,11 +30,11 @@ module.exports = function (eleventyConfig) {
       }
 
       return array.slice(0, n);
-    }
+    },
   );
 
   eleventyConfig.addFilter(
     "minifyCSS",
-    (/** @type {string} */ code) => new CleanCSS({}).minify(code).styles
+    (/** @type {string} */ code) => new CleanCSS({}).minify(code).styles,
   );
 };

@@ -2,14 +2,14 @@
 title: Creating a Simple Confirm Modal in Vanilla JS
 published: true
 description: Let's make a custom version of window.confirm() with the dialog element and the Promise API!
-tags: 
+tags:
   - JS
   - HTML
 layout: layouts/post.njk
 date: 2019-09-25
 ---
 
-Ever tried using `window.confirm()` before? It's a remarkable method that is very handy whenever you want your users to *really* be sure of what they're doing. However, have you tried styling it? Just like with `window.alert()` it's impossible, so we'll need to create our own Confirm Modal. I'll show you how!
+Ever tried using `window.confirm()` before? It's a remarkable method that is very handy whenever you want your users to _really_ be sure of what they're doing. However, have you tried styling it? Just like with `window.alert()` it's impossible, so we'll need to create our own Confirm Modal. I'll show you how!
 
 ## What to solve
 
@@ -19,7 +19,7 @@ First, it's useful to map out what we're trying to solve. It's important that ou
 - Let the user say 'Yes'
 - Let the user say 'No'
 
-Also, for developers, `window.confirm()` is *so* easy to use. We don't want to make it much harder for the developers using our custom confirm than it is to do `const theyAreSure = window.confirm('Are you sure');`.
+Also, for developers, `window.confirm()` is _so_ easy to use. We don't want to make it much harder for the developers using our custom confirm than it is to do `const theyAreSure = window.confirm('Are you sure');`.
 
 Another thing the native modal comes with is the modal itself. We don't want the devs using our component to create a lot of markup every time they need to ask their users to confirm something, which means our custom modal needs to produce this markup automatically.
 
@@ -36,10 +36,22 @@ For the sake of this tutorial, it's not too important to specify a convoluted ma
 
 ```html
 <dialog class="confirm-dialog">
-  <div class="confirm-dialog-question">Do you really want to delete your user account?</div>
+  <div class="confirm-dialog-question">
+    Do you really want to delete your user account?
+  </div>
   <div class="confirm-dialog-button-group">
-    <button class="confirm-dialog-button confirm-dialog-button--false" type="button">Noo</button>
-    <button class="confirm-dialog-button confirm-dialog-button--true" type="button">Yes!</button>
+    <button
+      class="confirm-dialog-button confirm-dialog-button--false"
+      type="button"
+    >
+      Noo
+    </button>
+    <button
+      class="confirm-dialog-button confirm-dialog-button--true"
+      type="button"
+    >
+      Yes!
+    </button>
   </div>
 </dialog>
 ```
@@ -48,8 +60,8 @@ If you're unfamiliar with the `<dialog>` element, go check out [MDN's documentat
 
 ```javascript
 function createDialog() {
-  const dialog = document.createElement('dialog');
-  dialog.textContent = '✨✨✨';
+  const dialog = document.createElement("dialog");
+  dialog.textContent = "✨✨✨";
 
   document.body.appendChild(dialog);
 
@@ -66,9 +78,9 @@ Ultimately, we would want the use of our component to look something like this:
 ```javascript
 async function deleteUsers() {
   const dialog = new ConfirmModal({
-    questionText: 'Are you sure you want to delete every user?',
+    questionText: "Are you sure you want to delete every user?",
   });
-  
+
   const deleteEveryUser = await dialog.confirm();
   if (deleteEveryUser) {
     // ...
@@ -78,7 +90,7 @@ async function deleteUsers() {
 
 This makes for a easy to use component, but would this work?
 
-JavaScript's `await`   stops code execution until the Promise that it's waiting for has been either **resolved** or **rejected**. The Promise can be resolved by  a function triggered by an Event and this is how we'll structure our code. When creating a new Promise, we will add an event listener to the two buttons and, depending on which of the buttons is clicked, resolve the Promise to either `true` or `false` - whether or not the user confirms.
+JavaScript's `await` stops code execution until the Promise that it's waiting for has been either **resolved** or **rejected**. The Promise can be resolved by a function triggered by an Event and this is how we'll structure our code. When creating a new Promise, we will add an event listener to the two buttons and, depending on which of the buttons is clicked, resolve the Promise to either `true` or `false` - whether or not the user confirms.
 
 ## Solving it
 
@@ -90,14 +102,10 @@ Let's start by creating a `ConfirmModal` class for our component. Its constructo
 
 ```javascript
 class ConfirmDialog {
-  constructor({
-    questionText,
-    trueButtonText,
-    falseButtonText
-  }) {
-    this.questionText = questionText || 'Are you sure?';
-    this.trueButtonText = trueButtonText || 'Yes';
-    this.falseButtonText = falseButtonText || 'No';
+  constructor({ questionText, trueButtonText, falseButtonText }) {
+    this.questionText = questionText || "Are you sure?";
+    this.trueButtonText = trueButtonText || "Yes";
+    this.falseButtonText = falseButtonText || "No";
 
     this.dialog = undefined;
     this.trueButton = undefined;

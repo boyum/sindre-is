@@ -14,13 +14,12 @@
 }
 
 .image-container {
-  background-image:
-    repeating-linear-gradient(
-      135deg,
-      var(--lightgray) 0.0625rem,
-      transparent 0.125rem,
-      transparent 0.5rem
-    );
+  background-image: repeating-linear-gradient(
+    135deg,
+    var(--lightgray) 0.0625rem,
+    transparent 0.125rem,
+    transparent 0.5rem
+  );
   position: relative;
 }
 

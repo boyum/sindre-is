@@ -42,7 +42,7 @@ module.exports = function (eleventyConfig) {
       permalink: true,
       permalinkClass: "direct-link",
       permalinkSymbol: "#",
-    })
+    }),
   );
 
   eleventyConfig.addWatchTarget("./**/*.(js|css)");

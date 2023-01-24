@@ -1,9 +1,9 @@
 ---
 title: Understanding pseudo elements - Display hrefs in printed documents
 published: true
-description: 
-tags: 
-  - CSS 
+description:
+tags:
+  - CSS
   - HTML
 series: Understanding pseudo elements
 layout: layouts/post.njk
