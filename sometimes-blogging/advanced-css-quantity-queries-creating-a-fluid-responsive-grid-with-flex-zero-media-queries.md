@@ -1,8 +1,8 @@
 ---
 title: Advanced CSS - Quantity Queries + Creating a Fluid Responsive Grid with Flex + Zero Media Queries
 published: true
-description: 
-tags: 
+description:
+tags:
   - CSS
   - HTML
 series: Advanced CSS

@@ -1,8 +1,8 @@
 ---
 title: Understanding pseudo elements - Creating Simple Tooltips with CSS and HTML
 published: true
-description: 
-tags: 
+description:
+tags:
   - CSS
   - HTML
 cover_image: https://images.unsplash.com/photo-1523540939399-141cbff6a8d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80
@@ -33,11 +33,7 @@ There is not much code to write in the HTML part of this, which is actually grea
 Let's start with a simple button:
 
 ```html
-<button
-  data-tooltip
-  aria-description="Stormy weather ahead!">
-  ⚡⚡⚡
-</button>
+<button data-tooltip aria-description="Stormy weather ahead!">⚡⚡⚡</button>
 ```
 
 The `aria-description` attribute makes screen readers read both the text inside the `button` element, as well as the description text. We'll use the `data-tooltip` to tell the browser that this element should have a tooltip.

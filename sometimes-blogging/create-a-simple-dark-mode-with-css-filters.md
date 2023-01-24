@@ -1,8 +1,8 @@
 ---
 title: Create a Simple Dark Mode with CSS Filters
 published: true
-description: 
-tags: 
+description:
+tags:
   - CSS
   - HTML
 layout: layouts/post.njk
@@ -27,7 +27,7 @@ Another filter function is the ✨`invert()`✨ function. It takes a percentage 
 
 _[The filter function] inverts the samples in the input image. The value of amount defines the proportion of the conversion. A value of 100% is completely inverted. A value of 0% leaves the input unchanged. Values between 0% and 100% are linear multipliers on the effect. The lacuna value for interpolation is 0._
 
-This sounds perfect for creating a simple dark mode! After all, black inverted is white (and vice versa), right? Sure! Let's try just inverting the entire page and  see how that looks:
+This sounds perfect for creating a simple dark mode! After all, black inverted is white (and vice versa), right? Sure! Let's try just inverting the entire page and see how that looks:
 
 {% codepen 'https://codepen.io/sindre/QXzPdj' %}
 
