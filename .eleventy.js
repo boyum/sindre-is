@@ -3,6 +3,7 @@
 const fs = require("fs");
 const MarkdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const { markdownItImageSize } = require("markdown-it-image-size");
 
 const initCollections = require("./_11ty/config/.eleventy.collections.js");
 const initFilters = require("./_11ty/config/.eleventy.filters.js");
@@ -11,7 +12,6 @@ const initShortcodes = require("./_11ty/config/.eleventy.shortcodes.js");
 const initTransforms = require("./_11ty/config/.eleventy.transforms.js");
 
 /**
- *
  * @param {EleventyConfig} eleventyConfig
  * @returns {EleventyFinalConfig}
  */
@@ -36,12 +36,14 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.setLibrary(
     "md",
-    // @ts-expect-error MarkdownItAnchor's type definitions are not updated
-    mdRenderer.use(markdownItAnchor, {
-      permalink: true,
-      permalinkClass: "direct-link",
-      permalinkSymbol: "#",
-    }),
+    mdRenderer
+      // @ts-expect-error MarkdownItAnchor's type definitions are not updated
+      .use(markdownItAnchor, {
+        permalink: true,
+        permalinkClass: "direct-link",
+        permalinkSymbol: "#",
+      })
+      .use(markdownItImageSize),
   );
 
   eleventyConfig.addWatchTarget("./**/*.(js|css)");

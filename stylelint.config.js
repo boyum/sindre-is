@@ -10,8 +10,6 @@ module.exports = {
         ignoreAtRules: ["extends", "include", "mixin", "each"],
       },
     ],
-    "value-list-comma-newline-after": null,
-    "declaration-colon-newline-after": null,
     "no-descending-specificity": null,
     "order/order": ["custom-properties", "declarations"],
     "order/properties-alphabetical-order": true,
