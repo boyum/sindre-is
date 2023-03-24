@@ -43,8 +43,8 @@
 .splash-screen {
   align-items: center;
   background-color: var(--background-color);
-  inset: 0;
   display: flex;
+  inset: 0;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
