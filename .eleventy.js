@@ -34,14 +34,15 @@ module.exports = function (eleventyConfig) {
     breaks: true,
     linkify: true,
   });
-  eleventyConfig.setLibrary(
+  eleventyConfig.amendLibrary(
     "md",
-    // @ts-expect-error MarkdownItAnchor's type definitions are not updated
-    mdRenderer.use(markdownItAnchor, {
-      permalink: true,
-      permalinkClass: "direct-link",
-      permalinkSymbol: "#",
-    }),
+    renderer =>
+      // @ts-expect-error MarkdownItAnchor's type definitions are not updated
+      renderer.use(markdownItAnchor, {
+        permalink: true,
+        permalinkClass: "direct-link",
+        permalinkSymbol: "#",
+      }),
   );
 
   eleventyConfig.addWatchTarget("./**/*.(js|css)");
