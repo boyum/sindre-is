@@ -44,7 +44,7 @@
     "prettier": "^2.8.7",
     "prettier-config": "github:boyum/prettier-config",
     "stylelint": "^15.5.0",
-    "stylelint-config-standard": "^32.0.0",
+    "stylelint-config-standard": "^33.0.0",
     "stylelint-order": "^6.0.3",
     "stylelint-prettier": "^3.0.0",
     "typescript": "^5.0.4"
