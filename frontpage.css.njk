@@ -1,0 +1,7 @@
+---
+permalink: css/frontpage.min.css
+---
+{% set css %}
+  {% include "css/frontpage.css" %}
+{% endset %}
+{{ css | minifyCSS | safe }}

@@ -127,10 +127,6 @@ code {
   text-decoration: underline;
 }
 
-.frontpage-heading {
-  margin-bottom: 1rem;
-}
-
 .postlist {
   list-style: none;
   margin: 0 -1rem -1rem;
@@ -145,20 +141,6 @@ code {
   color: var(--text-color);
   font-size: 0.8125em;
   word-spacing: -0.0313em;
-}
-
-.archive-link {
-  margin-top: 2rem;
-}
-
-.tmpl-home .postlist-link {
-  display: block;
-  font-weight: 700;
-}
-
-.tmpl-home h1 {
-  font-size: 4.1rem;
-  margin-bottom: 1rem;
 }
 
 .post-share-button,
@@ -228,10 +210,6 @@ code {
   color: white;
 }
 
-/* .post-share-button--error {
-  color: red;
-} */
-
 .post-share-button[hidden] {
   display: none;
 }
@@ -272,10 +250,6 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
   color: #aaa;
-}
-
-.intro + .intro {
-  margin-top: 1rem;
 }
 
 @keyframes sunrays {

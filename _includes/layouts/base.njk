@@ -19,10 +19,10 @@
     <meta property="og:description" content="{{ renderData.description or description or metadata.description }}" />
 
     <style>
-    {% set criticalCSS %}
-      {% include 'critical.css' %}
-    {% endset %}
-    {{ criticalCSS | minifyCSS | safe }}
+      {% set criticalCSS %}
+        {% include 'critical.css' %}
+      {% endset %}
+      {{ criticalCSS | minifyCSS | safe }}
     </style>
   </head>
   <body>

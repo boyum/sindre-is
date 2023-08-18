@@ -1,0 +1,71 @@
+.tmpl-home {
+  max-width: none;
+  width: 100%;
+}
+
+header:has(+ .tmpl-home) {
+  border: none;
+}
+
+.frontpage {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  margin-top: 4rem;
+}
+
+.hero {
+  --hero-color: var(--primary-color);
+
+  background-color: var(--hero-color);
+  padding: 4rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero {
+    --hero-color: var(--gray-900);
+  }
+}
+
+.title,
+.intro {
+  color: #fff;
+}
+
+.intro {
+  text-wrap: pretty;
+}
+
+@supports (text-wrap: balance) {
+  .intro {
+    text-wrap: balance;
+  }
+}
+
+.posts-heading {
+  border-bottom: 0.125rem solid var(--gray-900);
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.tmpl-home h1 {
+  font-size: 4.1rem;
+  margin-bottom: 1rem;
+}
+
+.tmpl-home .postlist-link {
+  display: block;
+  font-weight: 700;
+}
+
+.archive-link {
+  margin-top: 2rem;
+}
+
+.title,
+.intro,
+.posts {
+  margin: 0 auto;
+  max-width: 50rem;
+  width: 90%;
+}

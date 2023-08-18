@@ -5,13 +5,26 @@ tags:
 navtitle: Home
 ---
 
-<h1>{{ title or 'Sindre.is' }}</h1>
-<div class="intro">That's right - I exist! It's my pleasure to welcome you to my area of the Internet.</div>
-<div class="intro">I'm a frontend developer solving world problems with JS and ✨CSS✨.</div>
-<div class="intro">When off work, I might write about work (shameless plug), roam the wilderness, take photos of the world around me, or play a tune on my piano.</div>
+<link rel="stylesheet" href="{{ '/css/frontpage.min.css' | url }}" />
 
-<h2 class="frontpage-heading">I wrote this</h2>
-{% set postslist = collections.posts | head(-3) %}
-{% include "postslist.njk" %}
+<div class="frontpage">
+  <div class="hero">
+    <h1 class="title">Sindre Bøyum</h1>
+    <p class="intro">
+      It's my pleasure to welcome you to my area of the Internet. I'm a frontend
+      developer solving world problems with TS and CSS.
+    </p>
+  </div>
 
-<div class="archive-link">More posts can be found in <a href="{{ '/sometimes-blogging/' | url }}">the archive</a>.</div>
+  <div class="posts">
+    <h2 class="posts-heading">I wrote this</h2>
+    <!-- prettier-ignore -->
+    {% set postslist = collections.posts | head(-3) %}
+    {% include "postslist.njk" %}
+
+    <div class="archive-link">
+      More posts can be found in
+      <a href="{{ '/sometimes-blogging/' | url }}">the archive</a>.
+    </div>
+  </div>
+</div>
