@@ -1,5 +1,5 @@
 ---
-title: Storybook - Update your stories from CSF 2 to CSF 3 now!
+title: Update your Storybook stories from CSF 2 to CSF 3 now!
 published: true
 description:
 tags:
