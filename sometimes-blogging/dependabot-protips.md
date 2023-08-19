@@ -33,7 +33,7 @@ updates:
 
 By doing this, all dependencies that match the regexes will be grouped together in one PR and we no longer get a load of different PRs every week when SB creates a new patch version (no critique of SB here, it's just a very active project!).
 
-Other groups could be `angular`, `eslint`, `react`+`react-dom`+`@types/react`+`@types/react-dom`, `@typescript-eslint`.
+Other groups could be `angular`, `eslint`, `react`, and `@typescript-eslint`.
 
 ## Ignoring patch updates
 
