@@ -52,3 +52,5 @@ ignore:
   - dependency-name: storybook
     update-types: ["version-update:semver-patch"]
 ```
+
+_Cover image by [Xavier von Erlach](https://unsplash.com/@xavier_von_erlach) on [Unsplash](https://unsplash.com/photos/ooR1jY2yFr4)_

@@ -2,7 +2,8 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<link rel="stylesheet" href="{{ '/css/prism-synthwave84.min.css' | url }}">
+
+<link rel="stylesheet" href="{{ '/css/prism-synthwave84.min.css' | url }}" />
 
 {% if cover_image %}
 <div class="post-cover-image">
@@ -13,30 +14,6 @@ templateClass: tmpl-post
 <h1 class="post-title">{{ title }}</h1>
 {{ content | safe }}
 
-<p><a href="{{ '/' | url }}">← Home</a></p>
-
-<script>
-  if (navigator.share) {
-    const button = document.querySelector('.post-share-button');
-    button.removeAttribute('hidden');
-
-    button.addEventListener('click', async () => {
-      const title = 'An article by Sindre Bøyum';
-      const text = '{{ title}}';
-      const url = location.href;
-
-      try {
-        await navigator.share({
-          title,
-          text,
-          url,
-        });
-
-        button.classList.add('post-share-button-success');
-      }
-      catch {
-        button.classList.add('post-share-button--error');
-      }
-    });
-  }
-</script>
+<p>
+  <a href="{{ '/' | url }}">← Home</a>
+</p>
