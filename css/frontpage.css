@@ -27,6 +27,10 @@ header:has(+ .tmpl-home) {
   }
 }
 
+.title {
+  line-height: 1;
+}
+
 .title,
 .intro {
   color: #fff;
