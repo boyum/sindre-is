@@ -64,6 +64,7 @@ header:has(+ .tmpl-home) {
 }
 
 .archive-link {
+  font-size: 0.8rem;
   margin-top: 2rem;
 }
 
