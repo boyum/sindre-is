@@ -29,12 +29,13 @@ p,
 .tmpl-post li,
 img,
 .post-meta {
-  max-width: 37.5rem;
+  max-width: 45rem;
 }
 
 p,
 .tmpl-post li {
-  line-height: 1.45;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .post-cover-image {
@@ -85,7 +86,7 @@ code {
     0 0.5rem 0.5rem rgb(0 0 0 / 17%),
     0 1rem 1rem rgb(0 0 0 / 17%);
   font-size: 0.875rem;
-  margin: 0.5em 0 2em;
+  margin: 1.5em 0 2.5em;
   padding: 1.5em 1em;
 }
 
