@@ -30,6 +30,7 @@ header:has(+ .tmpl-home) {
 .title,
 .intro {
   color: #fff;
+  max-width: 30rem;
 }
 
 .intro {
@@ -62,8 +63,7 @@ header:has(+ .tmpl-home) {
   margin-top: 2rem;
 }
 
-.title,
-.intro,
+.hero-inner,
 .posts {
   margin: 0 auto;
   max-width: 50rem;
