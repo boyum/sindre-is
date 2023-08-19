@@ -3,9 +3,8 @@ title: Add type safety to your CSS modules
 published: true
 description:
 tags:
-  - Dependabot
-  - Automation
-series: Dependabot
+  - TypeScript
+  - CSS
 layout: layouts/post.njk
 cover_image: https://images.unsplash.com/photo-1547991476-3ac613673c46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2148&q=80
 date: 2023-05-15
