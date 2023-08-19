@@ -17,3 +17,10 @@ I am a person who writes stuff on computers 👩‍💻
 
 - 🏢 Worked with [ACOS AS](https://www.acos.no) improving public services throughout Norwegian municipalities mostly by creating their websites and making solutions for inhabitants
 - 👩‍🎓 Studied computer engineering at the [Western Norway University of Applied Sciences](https://www.hvl.no/en/)
+
+## Find me on
+
+- [GitHub](https://github.com/boyum)
+- [Twitter](https://twitter.com/sindreboyum)
+- [LinkedIn](https://www.linkedin.com/in/sindre-b%C3%B8yum-a62523b1/)
+- [CodePen](https://codepen.io/sindre)
