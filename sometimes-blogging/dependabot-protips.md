@@ -1,5 +1,5 @@
 ---
-title: Improve your Dependabot experience with grouping and patch update ignoring
+title: Improve your Dependabot experience with grouping and version ignoring
 published: true
 description:
 tags:
