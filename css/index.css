@@ -263,6 +263,6 @@ a[href].direct-link:focus:visited,
   }
 }
 
-code {
+p code {
   background-color: var(--code-background-color);
 }
