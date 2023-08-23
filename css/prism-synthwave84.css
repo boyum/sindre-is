@@ -10,6 +10,7 @@
   pre[class*="language-"] {
     background: none;
     color: #f92aad;
+
     /* font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; */
     font-size: 1em;
     hyphens: none;
