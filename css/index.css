@@ -32,6 +32,12 @@ img,
   max-width: 45rem;
 }
 
+img {
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+
 p,
 .tmpl-post li {
   font-size: 0.9rem;

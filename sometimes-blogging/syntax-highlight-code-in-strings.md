@@ -7,6 +7,7 @@ tags:
   - JavaScript
 layout: layouts/post.njk
 date: 2023-06-21
+cover_image: https://images.unsplash.com/photo-1594904351111-a072f80b1a71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=420&q=80
 ---
 
 Sometimes as developers we have to write code that generates code. This can be for a number of reasons, but one of the most common ones is that we want to generate HTML or CSS from JavaScript. This is a common pattern in libraries like [styled-components](https://styled-components.com/) and [Lit](https://lit.dev/), but it's also something you might want to do if you're writing a tool that generates HTML or CSS.
@@ -71,4 +72,8 @@ const myHtml = html`
 `;
 ```
 
+![How it looks in my editor](/img/syntax-highlight.png)
+
 (Regrettably, my blog doesn't recognize this as CSS or HTML, but try it out in your editor!)
+
+_Cover image by [Walkator](https://unsplash.com/@walkator) on [Unsplash](https://unsplash.com/photos/klMii3cR9iI)_
