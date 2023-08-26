@@ -7,11 +7,22 @@ date: 2000-01-04
 ---
 
 <link rel="stylesheet" href="{{ '/css/frontpage.min.css' | url }}" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&display=swap"
+  rel="stylesheet"
+/>
 
 <div class="frontpage">
   <div class="hero">
     <div class="hero-inner">
-      <h1 class="title">Sindre Bøyum</h1>
+      <h1 class="title">
+        <div class="title-text" aria-hidden="true">Sindre</div>
+        <div class="title-text" aria-hidden="true">Sindre</div>
+        <div class="title-text" aria-hidden="true">Sindre</div>
+        <div class="title-text">Sindre</div>
+      </h1>
       <p class="intro">
         It's my pleasure to welcome you to my area of the Internet. I'm a
         frontend developer solving world problems with TS and CSS.
@@ -31,3 +42,71 @@ date: 2000-01-04
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const textElement = document.querySelector(".title-text:last-child");
+    textElement.addEventListener("mousemove", handleMouseMove);
+    textElement.addEventListener("touchmove", handleTouchMove);
+
+    textElement.addEventListener("mouseleave", handleMouseOut);
+    textElement.addEventListener("touchend", handleMouseOut);
+
+    const textElements = document.querySelectorAll(".title-text");
+
+    let { width, height, x, y } = textElement.getBoundingClientRect();
+
+    function handleMouseMove(event) {
+      const { offsetX, offsetY } = event;
+
+      let xRatio = Math.min(offsetX / width, 1);
+      let yRatio = Math.min(offsetY / height, 1);
+
+      xRatio = xRatio * 2 - 1;
+      yRatio = yRatio * 2 - 1;
+
+      updateTranslations(xRatio, yRatio);
+    }
+
+    function handleMouseOut(event) {
+      textElements.forEach(element => {
+        element.style.removeProperty("--translate-x");
+        element.style.removeProperty("--translate-y");
+      });
+    }
+
+    function handleTouchMove(event) {
+      const { touches } = event;
+      const { clientX, clientY } = touches[0];
+
+      const offsetX = clientX - x;
+      const offsetY = clientY - y;
+
+      let xRatio = Math.min(offsetX / width, 1);
+      let yRatio = Math.min(offsetY / height, 1);
+
+      xRatio = xRatio * 2 - 1;
+      yRatio = yRatio * 2 - 1;
+
+      updateTranslations(xRatio, yRatio);
+    }
+
+    function updateTranslations(xRatio, yRatio) {
+      const numberOfElements = textElements.length;
+      for (let i = 0; i < numberOfElements - 1; i += 1) {
+        // Skip the last one as it shouldn't move
+
+        const element = textElements[i];
+        element.style.setProperty(
+          "--translate-x",
+          -((1 / ((i + 1) / numberOfElements)) * xRatio) + "%",
+        );
+
+        element.style.setProperty(
+          "--translate-y",
+          -((1 / ((i + 1) / numberOfElements)) * yRatio) + "%",
+        );
+      }
+    }
+  });
+</script>
