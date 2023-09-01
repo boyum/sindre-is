@@ -10,9 +10,11 @@
     <meta name="theme-color" content="#009688" />
     <link rel="icon" href="/img/sb-144.png">
 
-    <meta property="og:image" content="{{ og_image or cover_image or '/img/default-og-image.jpg' }}" />
-    <meta property="og:image:width" content="{{ og_image_width or cover_image_width or 1260 }}" />
-    <meta property="og:image:height" content="{{ og_image_height or cover_image_height or 630 }}" />
+    {% if og_image or cover_image %}
+    <meta property="og:image" content="{{ og_image or cover_image }}" />
+    <meta property="og:image:width" content="{{ og_image_width or cover_image_width  }}" />
+    <meta property="og:image:height" content="{{ og_image_height or cover_image_height }}" />
+    {% endif %}
     {# <meta property="og:url" content="" /> #}
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ renderData.title or title or metadata.title }}" />
