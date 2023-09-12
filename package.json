@@ -48,6 +48,5 @@
     "typescript": "^5.2.2",
     "bun-types": "latest"
   },
-  "module": "index.ts",
-  "type": "module"
+  "module": "index.ts"
 }
