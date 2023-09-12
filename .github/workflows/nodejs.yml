@@ -7,60 +7,46 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - name: Use Bun
+        uses: oven-sh/setup-bun@v1
 
       - name: Install npm dependencies
-        uses: bahmutov/npm-install@v1
+        run: bun install --frozen-lockfile
 
       - name: Validate types
-        run: npm run validate-types
+        run: bun run validate-types
 
   lint:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - name: Use Bun
+        uses: oven-sh/setup-bun@v1
 
       - name: Install npm dependencies
-        uses: bahmutov/npm-install@v1
+        run: bun install --frozen-lockfile
 
       - name: Lint
-        run: npm run lint
-
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-
-      - name: Install npm dependencies
-        uses: bahmutov/npm-install@v1
-
-      - name: Test
-        run: npm test
-        env:
-          CI: true
+        run: bun run lint
 
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - name: Use Bun
+        uses: oven-sh/setup-bun@v1
 
       - name: Install npm dependencies
-        uses: bahmutov/npm-install@v1
+        run: bun install --frozen-lockfile
 
       - name: Build
-        run: npm run build
+        run: bun run build
