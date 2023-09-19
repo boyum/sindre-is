@@ -14,7 +14,8 @@ To solve this, I appreciate good PR descriptions! GitHub allows you to add a pul
 ```md
 ## 📝 Description
 
-A description of the changes made. If there are multiple things done, I would recommend using bullet lists. They can:
+A description of the changes made. If there are multiple things done,
+I would recommend using bullet lists. They can:
 
 - Help break up the text
 - Clarify what one should focus on
@@ -22,7 +23,10 @@ A description of the changes made. If there are multiple things done, I would re
 
 ## 👀 Review
 
-How to go about reading through the code and testing it. Have you used a specific page to test the changes? Include a link! Numbered lists are a good pro-tip here. They can instruct which steps to follow for testing (all steps should use "1." as Markdown will handle numbering automatically):
+How to go about reading through the code and testing it. Have you used
+a specific page to test the changes? Include a link! Numbered lists are
+a good pro-tip here. They can instruct which steps to follow for testing
+(all steps should use "1." as Markdown will handle numbering automatically):
 
 1. Open https://link-to-pr.example.org/login
 1. Log in with username ("heihei@gmail.com") and password ("👡🐒🪲")
@@ -35,7 +39,8 @@ You can also use a checklist to indicate what needs to be tested:
 
 ## ✅ Check list
 
-This checklist can be used by those who created the PR. Typical items might include:
+This checklist can be used by those who created the PR. Typical items might
+include:
 
 I have
 
