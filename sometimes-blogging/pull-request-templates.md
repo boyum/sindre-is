@@ -12,14 +12,16 @@ One of the things I miss the most in my everyday life as a pull request reviewer
 To solve this, I appreciate good PR descriptions! GitHub allows you to add a pull_request_template.yml file in the .github folder. This serves as a template for the descriptions of new PRs. I like a setup like this:
 
 ```md
-📝 Description
+## 📝 Description
+
 A description of the changes made. If there are multiple things done, I would recommend using bullet lists. They can:
 
 - Help break up the text
 - Clarify what one should focus on
 - Make the description more elegant ✨
 
-👀 Review
+## 👀 Review
+
 How to go about reading through the code and testing it. Have you used a specific page to test the changes? Include a link! Numbered lists are a good pro-tip here. They can instruct which steps to follow for testing (all steps should use "1." as Markdown will handle numbering automatically):
 
 1. Open https://link-to-pr.example.org/login
@@ -31,7 +33,8 @@ You can also use a checklist to indicate what needs to be tested:
 - [ ] Check that the website is not upside down
 - [ ] Test that logging out is possible too
 
-✅ Check list
+## ✅ Check list
+
 This checklist can be used by those who created the PR. Typical items might include:
 
 I have
