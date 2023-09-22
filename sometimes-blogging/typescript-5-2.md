@@ -2,7 +2,7 @@
 title: The new `using` keyword in TypeScript 5.2
 published: true
 tags:
-  - TypeScdript
+  - TypeScript
 layout: layouts/post.njk
 date: 2023-08-25
 ---
@@ -15,28 +15,28 @@ This example is copied from the [TS team's blog post](https://devblogs.microsoft
 
 ```ts
 function loggy(id: string): Disposable {
-    console.log(`Creating ${id}`);
+  console.log(`Creating ${id}`);
 
-    return {
-        [Symbol.dispose]() {
-            console.log(`Disposing ${id}`);
-        }
-    }
+  return {
+    [Symbol.dispose]() {
+      console.log(`Disposing ${id}`);
+    },
+  };
 }
 
 function func() {
-    using a = loggy("a");
-    using b = loggy("b");
-    {
-        using c = loggy("c");
-        using d = loggy("d");
-    }
-    using e = loggy("e");
-    return;
+  using a = loggy("a");
+  using b = loggy("b");
+  {
+    using c = loggy("c");
+    using d = loggy("d");
+  }
+  using e = loggy("e");
+  return;
 
-    // Unreachable.
-    // Never created, never disposed.
-    using f = loggy("f");
+  // Unreachable.
+  // Never created, never disposed.
+  using f = loggy("f");
 }
 
 func();
