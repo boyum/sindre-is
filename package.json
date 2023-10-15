@@ -33,6 +33,7 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@types/luxon": "^3.3.2",
+    "bun-types": "latest",
     "clean-css": "^5.3.2",
     "html-minifier": "^4.0.0",
     "luxon": "^3.4.3",
@@ -45,8 +46,10 @@
     "stylelint-config-standard": "^34.0.0",
     "stylelint-order": "^6.0.3",
     "stylelint-prettier": "^4.0.2",
-    "typescript": "^5.2.2",
-    "bun-types": "latest"
+    "typescript": "^5.2.2"
   },
-  "module": "index.ts"
+  "module": "index.ts",
+  "dependencies": {
+    "micromatch": "^4.0.5"
+  }
 }

@@ -3,7 +3,7 @@
 
 /**
  *
- * @param {Collection} collection
+ * @param {TemplateCollection} collection
  * @returns {Array<string>}
  */
 module.exports = function (collection) {
