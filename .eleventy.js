@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 const MarkdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
+const markdownItAnchor = require("markdown-it-anchor").default;
 const { markdownItImageSize } = require("markdown-it-image-size");
 
 const initCollections = require("./_11ty/config/.eleventy.collections.js");
@@ -37,7 +37,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary(
     "md",
     mdRenderer
-      // @ts-expect-error MarkdownItAnchor's type definitions are not updated
       .use(markdownItAnchor, {
         permalink: true,
         permalinkClass: "direct-link",

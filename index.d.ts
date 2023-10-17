@@ -1,6 +1,7 @@
-declare type Collection = {
+declare class TemplateCollection {
   getAll: () => Array<CollectionItem>;
-};
+  items: Array<CollectionItem>;
+}
 
 declare type CollectionItem = {
   data: CollectionData;
@@ -54,7 +55,9 @@ declare type Template = {
 declare type EleventyConfig = {
   addCollection: (
     name: string,
-    collection: Array<string> | ((collection: Collection) => Array<string>),
+    collection:
+      | Array<string>
+      | ((collection: TemplateCollection) => Array<CollectionItem>),
   ) => void;
   addFilter: (
     name: string,

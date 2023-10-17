@@ -1,5 +1,5 @@
 ---
-title: Typescript's "satisfies" keyword
+title: TypeScript's "satisfies" keyword
 published: true
 description:
 tags:
