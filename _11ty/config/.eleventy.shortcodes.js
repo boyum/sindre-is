@@ -5,7 +5,7 @@
  *
  * @param {EleventyConfig} eleventyConfig
  */
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addShortcode("codepen", (/** @type {string} */ url) => {
     const penUrl = url.includes("embed")
       ? url
@@ -21,4 +21,4 @@ module.exports = function (eleventyConfig) {
       style="width: 100%;"
     ></iframe>`;
   });
-};
+}

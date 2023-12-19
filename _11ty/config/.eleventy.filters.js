@@ -1,13 +1,12 @@
 // @ts-check
 /// <reference path="../../index.d.ts" />
-
-const { DateTime } = require("luxon");
-const CleanCSS = require("clean-css");
+import CleanCSS from "clean-css";
+import { DateTime } from "luxon";
 
 /**
  * @param {EleventyConfig} eleventyConfig
  */
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {
       zone: "utc",
@@ -37,4 +36,4 @@ module.exports = function (eleventyConfig) {
     "minifyCSS",
     (/** @type {string} */ code) => new CleanCSS({}).minify(code).styles,
   );
-};
+}
