@@ -1,21 +1,19 @@
 // @ts-check
-
-const fs = require("fs");
-const MarkdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor").default;
-const { markdownItImageSize } = require("markdown-it-image-size");
-
-const initCollections = require("./_11ty/config/.eleventy.collections.js");
-const initFilters = require("./_11ty/config/.eleventy.filters.js");
-const initPlugins = require("./_11ty/config/.eleventy.plugins.js");
-const initShortcodes = require("./_11ty/config/.eleventy.shortcodes.js");
-const initTransforms = require("./_11ty/config/.eleventy.transforms.js");
+import { readFileSync } from "fs";
+import MarkdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
+import { markdownItImageSize } from "markdown-it-image-size";
+import initCollections from "./_11ty/config/.eleventy.collections.js";
+import initFilters from "./_11ty/config/.eleventy.filters.js";
+import initPlugins from "./_11ty/config/.eleventy.plugins.js";
+import initShortcodes from "./_11ty/config/.eleventy.shortcodes.js";
+import initTransforms from "./_11ty/config/.eleventy.transforms.js";
 
 /**
  * @param {EleventyConfig} eleventyConfig
  * @returns {EleventyFinalConfig}
  */
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   initCollections(eleventyConfig);
   initFilters(eleventyConfig);
   initPlugins(eleventyConfig);
@@ -50,7 +48,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: function (err, browserSync) {
-        const content_404 = fs.readFileSync("_site/404.html");
+        const content_404 = readFileSync("_site/404.html");
 
         browserSync.addMiddleware("*", (req, res) => {
           // Provides the 404 content without redirect.
@@ -81,4 +79,4 @@ module.exports = function (eleventyConfig) {
       output: "_site",
     },
   };
-};
+}

@@ -6,7 +6,7 @@
  * @param {TemplateCollection} collection
  * @returns {Array<string>}
  */
-module.exports = function (collection) {
+export default function (collection) {
   const tagSet = new Set();
 
   collection.getAll().forEach(item => {
@@ -21,4 +21,4 @@ module.exports = function (collection) {
   });
 
   return [...tagSet];
-};
+}

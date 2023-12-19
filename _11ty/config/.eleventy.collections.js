@@ -1,7 +1,6 @@
 // @ts-check
 /// <reference path="../../index.d.ts" />
-
-const { isMatch } = require("micromatch");
+import micromatch from "micromatch";
 
 /**
  * Filters a collection by a glob pattern.
@@ -14,7 +13,7 @@ function filterByGlob(glob) {
     // Remove `./` from the input path to let micromatch match the glob pattern
     const pathWithoutRelative = item.inputPath.slice(2);
 
-    return isMatch(pathWithoutRelative, glob);
+    return micromatch.isMatch(pathWithoutRelative, glob);
   };
 }
 
@@ -37,10 +36,10 @@ function removePostIndexFromPaths(item) {
 /**
  * @param {EleventyConfig} eleventyConfig
  */
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addCollection("posts", collection => {
     return collection.items
       .filter(filterByGlob("sometimes-blogging/*.md"))
       .map(removePostIndexFromPaths);
   });
-};
+}

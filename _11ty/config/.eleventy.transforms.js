@@ -1,17 +1,16 @@
 // @ts-check
 /// <reference path="../../index.d.ts" />
-
-const htmlmin = require("html-minifier");
-const CleanCSS = require("clean-css");
+import CleanCSS from "clean-css";
+import { minify } from "html-minifier";
 
 /**
  *
  * @param {EleventyConfig} eleventyConfig
  */
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (outputPath.endsWith(".html")) {
-      let minified = htmlmin.minify(content, {
+      let minified = minify(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true,
@@ -29,4 +28,4 @@ module.exports = function (eleventyConfig) {
 
     return content;
   });
-};
+}
