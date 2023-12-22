@@ -27,7 +27,7 @@ updates:
     groups:
       storybook:
         patterns:
-          - "@storybook/.*"
+          - "@storybook/*"
           - storybook
 ```
 
