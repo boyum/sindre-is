@@ -15,7 +15,7 @@ Dependabot is GitHub's tool for automating dependency updates. It's great! But i
 
 ## Grouping
 
-Ever had Dependabot create seven PRs for the same dependency update? If you're working with dependencies like Storybook, you probably have. To make it a little smarter, we can tell it to group certain dependencies. The `groups` keyword lets us create a new group and specify by regex which dependencies should be grouped together.
+Ever had Dependabot create seven PRs for the same dependency update? If you're working with dependencies like Storybook, you probably have. To make it a little smarter, we can tell it to group certain dependencies. The `groups` keyword lets us create a new group and specify by a pattern which dependencies should be grouped together.
 
 ```yml
 version: 2
@@ -27,13 +27,16 @@ updates:
     groups:
       storybook:
         patterns:
-          - ^@storybook/.*
-          - ^storybook$
+          - "@storybook/.*"
+          - storybook
 ```
 
 By doing this, all dependencies that match the regexes will be grouped together in one PR and we no longer get a load of different PRs every week when SB creates a new patch version (no critique of SB here, it's just a very active project!).
 
 Other groups could be `angular`, `eslint`, `react`, and `@typescript-eslint`.
+
+It's also possible to group by dependency type, so you could group all dev dependencies together, for example.
+See more in [the docs](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#groups).
 
 ## Ignoring patch updates
 
