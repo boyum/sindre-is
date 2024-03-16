@@ -37,7 +37,7 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@types/luxon": "^3.4.2",
-    "bun-types": "latest",
+    "bun-types": "^1.0.31",
     "clean-css": "^5.3.3",
     "html-minifier": "^4.0.0",
     "luxon": "^3.4.4",
