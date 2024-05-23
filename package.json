@@ -30,7 +30,7 @@
   },
   "prettier": "prettier-config",
   "dependencies": {
-    "micromatch": "^4.0.5"
+    "micromatch": "4.0.7"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0-alpha.2",
