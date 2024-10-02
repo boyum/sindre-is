@@ -16,8 +16,8 @@
   },
   "type": "module",
   "scripts": {
-    "build": "eleventy",
-    "debug": "DEBUG=* eleventy",
+    "build": "bun run eleventy",
+    "debug": "DEBUG=* bun run eleventy",
     "fix-lint": "bun run stylelint-fix",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
@@ -26,30 +26,30 @@
     "stylelint-fix": "bun run stylelint -- --fix",
     "travis": "bun run test",
     "validate-types": "tsc --noEmit",
-    "watch": "eleventy --watch --serve"
+    "watch": "bun run eleventy --watch --serve"
   },
   "prettier": "prettier-config",
   "dependencies": {
-    "micromatch": "^4.0.5"
+    "micromatch": "^4.0.8"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0-alpha.2",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@types/luxon": "^3.4.2",
     "bun-types": "latest",
     "clean-css": "^5.3.3",
     "html-minifier": "^4.0.0",
-    "luxon": "^3.4.4",
-    "markdown-it": "^14.0.0",
-    "markdown-it-anchor": "^8.6.7",
-    "markdown-it-image-size": "^14.1.0",
-    "prettier": "^3.2.5",
+    "luxon": "^3.5.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-image-size": "^14.1.1",
+    "prettier": "^3.3.3",
     "prettier-config": "github:boyum/prettier-config",
-    "stylelint": "^16.2.1",
-    "stylelint-config-standard": "^36.0.0",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1",
     "stylelint-order": "^6.0.4",
-    "stylelint-prettier": "^5.0.0",
-    "typescript": "^5.3.3"
+    "stylelint-prettier": "^5.0.2",
+    "typescript": "^5.6.2"
   }
 }

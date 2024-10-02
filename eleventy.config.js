@@ -36,9 +36,10 @@ export default function (eleventyConfig) {
     "md",
     mdRenderer
       .use(markdownItAnchor, {
-        permalink: true,
-        permalinkClass: "direct-link",
-        permalinkSymbol: "#",
+        permalink: markdownItAnchor.permalink.headerLink({
+          class: "direct-link",
+          symbol: "#",
+        }),
       })
       .use(markdownItImageSize),
   );

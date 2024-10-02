@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ '/css/index.min.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <meta name="theme-color" content="#009688" />
+    <meta name="generator" content="{{ eleventy.generator }}">
     <link rel="icon" href="/img/sb-144.png">
 
     {% if og_image or cover_image %}
