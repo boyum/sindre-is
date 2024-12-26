@@ -1,5 +1,5 @@
 // @ts-check
-import { readFileSync } from "fs";
+import { readFileSync } from "node:fs";
 import MarkdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 import { markdownItImageSize } from "markdown-it-image-size";
