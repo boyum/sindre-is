@@ -43,7 +43,7 @@
     "luxon": "^3.5.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
-    "markdown-it-image-size": "^14.1.2",
+    "markdown-it-image-size": "^16.0.1",
     "prettier": "^3.3.3",
     "prettier-config": "github:boyum/prettier-config",
     "stylelint": "^16.10.0",
